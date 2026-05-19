@@ -1,116 +1,122 @@
 schema: hugoblox/author/v1
 slug: me
 is_owner: true
+user_groups:
+  - Faculty
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
+  display: Jun Kobayashi
+  given: Jun
+  family: Kobayashi
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
 postnominals:
   - PhD
-  - MIEEE
 status:
-  icon: "☕️"
-role: Senior AI Research Scientist
+  icon: ''
+role: Associate Professor
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Working on biologically-inspired robotics — liquid neural networks, active
+  inference, and musculoskeletal modeling for robot arm control — at the
+  Department of Intelligent and Control Systems, Kyushu Institute of Technology.
 
+# 日本語: 九州工業大学 大学院情報工学研究院 知的システム工学研究系
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Department of Intelligent and Control Systems, Graduate School of Computer Science and Systems Engineering, Kyushu Institute of Technology
+    url: https://www.kyutech.ac.jp/
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
+    url: mailto:kobayashi.jun184@m.kyutech.ac.jp
+    label: E-mail
   - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://github.com/jkoba0512
+# 必要に応じてコメントアウトを外す:
+#  - icon: academicons/google-scholar
+#    url: https://scholar.google.com/citations?user=XXXX
+#  - icon: academicons/orcid
+#    url: https://orcid.org/0000-0000-0000-0000
+#  - icon: academicons/researchgate
+#    url: https://www.researchgate.net/profile/XXXX
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Liquid Neural Networks (CfC / LNN)
+  - Active Inference / Free Energy Principle
+  - Computational Neuroscience
+  - Robot Arm Control
+  - Musculoskeletal Simulation
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: PhD in Computer Science and Systems Engineering
+    institution: Kyushu Institute of Technology
+    start: 1996-04-01
+    end: 1999-03-31
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      Dissertation: "Object Manipulation by Multiple Free-Flying Space Robots"
+      （博士論文：複数台の浮遊型宇宙ロボットによる物体マニピュレーションに関する研究）
+  - degree: MEng in Information Science
+    institution: Kyushu Institute of Technology
+    start: 1994-04-01
+    end: 1996-03-31
+  - degree: BEng in Control Systems Engineering
+    institution: Kyushu Institute of Technology
+    start: 1992-04-01
+    end: 1994-03-31
+  - degree: Associate Degree, Department of Electrical Engineering
+    institution: Kurume National College of Technology
+    start: 1987-04-01
+    end: 1992-03-31
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
-    summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
-
-skills:
-  - name: Technical Skills
-    items:
-      - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
-
-languages:
-  - name: English
-    level: 5
-    label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
+  - role: Associate Professor
+    org: Graduate School of Computer Science and Systems Engineering, Kyushu Institute of Technology
+    start: 2012-04-01
+  - role: Assistant Professor
+    org: Graduate School of Computer Science and Systems Engineering, Kyushu Institute of Technology
+    start: 2008-04-01
+    end: 2012-03-31
+  - role: Assistant Professor
+    org: Faculty of Computer Science and Systems Engineering, Kyushu Institute of Technology
+    start: 2007-04-01
+    end: 2008-03-31
+  - role: Visiting Researcher
+    org: University of Victoria, Canada
+    start: 2000-02-01
+    end: 2000-03-31
+  - role: Research Associate
+    org: Faculty of Computer Science and Systems Engineering, Kyushu Institute of Technology
+    start: 1999-04-01
+    end: 2007-03-31
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
+  - title: SI2007 優秀講演賞
+    awarder: SICE System Integration Division
+    date: "2007-12-01"
+    summary: |
+      Awarded at the 8th SICE System Integration Division Annual Conference (SI2007)
+      for the talk "振動現象を利用して力を発生するマニピュレータの力制御手法"
+      (J. Kobayashi, F. Ohkawa).
     icon: hero/trophy
+  - title: Best Presentation Award
+    awarder: The Institute of Control, Automation and Systems Engineers (ICASE / now ICROS)
+    date: "2005-06-01"
+    summary: |
+      Awarded at ICCAS 2005 for "Natural Frequency Analysis of Spring-Manipulator
+      System for Force Generation Utilizing Mechanical Resonance" (J. Kobayashi, F. Ohkawa).
+    icon: hero/trophy
+  - title: Best Presentation Award
+    awarder: IEEE Industrial Electronics Society
+    date: "2001-11-01"
+    summary: |
+      Awarded at IECON 2001 for "Advantages of Torque Unit for Flexible Beam Control"
+      (J. Kobayashi, H. Kugimachi, F. Ohkawa).
+    icon: hero/trophy
+  - title: 学術奨励賞
+    awarder: SICE Kyushu Branch
+    date: "2000-12-01"
+    summary: |
+      Awarded at the 19th SICE Kyushu Branch Annual Conference for the talk
+      "フレキシブルマニピュレータの適応形予測制御"
+      (J. Kobayashi, H. Ogawa, F. Ohkawa).
+    icon: hero/trophy
+

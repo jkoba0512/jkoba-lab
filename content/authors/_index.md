@@ -1,9 +1,6 @@
 ---
-# To publish author profile pages, remove all the `build` and `cascade` settings below.
+# Disable the /authors/ section index page itself, but allow each author taxonomy
+# term page (e.g. /authors/me/) to render so they can be linked from /people/.
 build:
   render: never
-cascade:
-  build:
-    render: never
-    list: always
 ---
