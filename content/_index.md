@@ -33,10 +33,10 @@ sections:
           description: |-
             Free energy principle as a framework for goal-directed control of robot arms.
           icon: hero/light-bulb
-        - name: Musculoskeletal Modeling
+        - name: Computational Neuroscience
           description: |-
-            Biomechanically faithful arm models for studying reaching and motor control.
-          icon: hero/heart
+            Building control systems grounded in human and biological neuroscience, physiology, and anatomy — using models, simulations, and experiments to surface gaps in current biological understanding.
+          icon: hero/beaker
 
   - block: collection
     id: news

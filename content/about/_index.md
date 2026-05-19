@@ -43,8 +43,10 @@ sections:
           as policy and dynamics models for robust robot control
         - **Active Inference / Free Energy Principle** — goal-directed control of
           robot arms grounded in the free-energy principle
-        - **Musculoskeletal Modeling** — biomechanically faithful arm models for
-          studying reaching and motor control
+        - **Computational Neuroscience** — building control systems grounded in
+          human and biological neuroscience, physiology, and anatomy — using
+          models, simulations, and experiments to surface gaps in current
+          biological understanding
     design:
       columns: '1'
 
