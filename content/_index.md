@@ -28,15 +28,17 @@ sections:
         - name: Liquid Neural Networks
           description: |-
             CfC / LNN as policy and dynamics models for robust, adaptive robot control.
-          icon: hero/cpu-chip
+          image: research-themes/liquid-neural-networks.png
         - name: Active Inference
           description: |-
             Free energy principle as a framework for goal-directed control of robot arms.
-          icon: hero/light-bulb
+          image: research-themes/active-inference.png
         - name: Computational Neuroscience
           description: |-
             Building control systems grounded in human and biological neuroscience, physiology, and anatomy — using models, simulations, and experiments to surface gaps in current biological understanding.
-          icon: hero/beaker
+          image: research-themes/computational-neuroscience.png
+    design:
+      layout: cards
 
   - block: collection
     id: news
