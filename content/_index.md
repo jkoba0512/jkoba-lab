@@ -22,21 +22,25 @@ sections:
 
   - block: focus-areas
     content:
-      title: Research Themes
-      subtitle: ''
+      title: Research Theme
+      subtitle: |-
+        Not three separate tracks, but one integrated program. We fuse these
+        perspectives — a biological grounding, a guiding principle, and a
+        computational substrate — into a single approach to adaptive,
+        biologically-inspired motor control.
       items:
-        - name: Liquid Neural Networks
-          description: |-
-            CfC / LNN as policy and dynamics models for robust, adaptive robot control.
-          image: research-themes/liquid-neural-networks.png
-        - name: Active Inference
-          description: |-
-            Free energy principle as a framework for goal-directed control of robot arms.
-          image: research-themes/active-inference.png
         - name: Computational Neuroscience
           description: |-
-            Building control systems grounded in human and biological neuroscience, physiology, and anatomy — using models, simulations, and experiments to surface gaps in current biological understanding.
+            **The biological grounding.** Models of human and biological motor control set the targets and constraints that *Active Inference* formalizes and *Liquid Neural Networks* implement — and the robot, in turn, surfaces gaps in our biological understanding.
           image: research-themes/computational-neuroscience.png
+        - name: Active Inference
+          description: |-
+            **The guiding principle.** The free energy principle links the neuroscience grounding to the network substrate, turning prediction and uncertainty into goal-directed control of robot arms.
+          image: research-themes/active-inference.png
+        - name: Liquid Neural Networks
+          description: |-
+            **The computational substrate.** CfC / LNN realize the active-inference controller as continuous-time dynamics — the trainable body that the neuroscience grounds and the inference principle drives.
+          image: research-themes/liquid-neural-networks.png
     design:
       layout: cards
 
