@@ -24,10 +24,9 @@ sections:
     content:
       title: Research Theme
       subtitle: |-
-        Not three separate tracks, but one integrated program. We fuse these
-        perspectives — a biological grounding, a guiding principle, and a
-        computational substrate — into a single approach to adaptive,
-        biologically-inspired motor control.
+        We fuse these perspectives — a biological grounding, a guiding
+        principle, and a computational substrate — into a single approach to
+        adaptive, biologically-inspired motor control.
       items:
         - name: Computational Neuroscience
           description: |-
