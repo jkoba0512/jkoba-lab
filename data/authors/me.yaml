@@ -31,11 +31,11 @@ links:
     label: E-mail
   - icon: brands/github
     url: https://github.com/jkoba0512
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0002-6318-2617
 # 必要に応じてコメントアウトを外す:
 #  - icon: academicons/google-scholar
 #    url: https://scholar.google.com/citations?user=XXXX
-#  - icon: academicons/orcid
-#    url: https://orcid.org/0000-0000-0000-0000
 #  - icon: academicons/researchgate
 #    url: https://www.researchgate.net/profile/XXXX
 
