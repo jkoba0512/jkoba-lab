@@ -5,20 +5,19 @@ date: 2026-05-07
 type: landing
 
 sections:
-  - block: markdown
+  - block: hero
     content:
-      title: ''
-      subtitle: ''
+      eyebrow: Biologically-Inspired Robotics
+      title: 🤖 jkoba Lab
       text: |-
-        # 🤖 jkoba Lab
-
-        ## Biologically-Inspired Robotics
-
         We design controllers for robots by drawing on principles from neural
         computation and human movement, at the **Department of Intelligent
         and Control Systems**, Kyushu Institute of Technology.
+      media:
+        src: research-hero.png
+        alt: Anime-style illustration of a humanoid robot with a visible brain and nervous system, studied by robotic arms in a neuroscience laboratory.
     design:
-      columns: '1'
+      layout: split-left
 
   - block: focus-areas
     content:
