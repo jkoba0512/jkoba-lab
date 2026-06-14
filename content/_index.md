@@ -10,9 +10,13 @@ sections:
       eyebrow: Biologically-Inspired Robotics
       title: 🤖 jkoba Lab
       text: |-
-        We design controllers for robots by drawing on principles from neural
-        computation and human movement, at the **Department of Intelligent
-        and Control Systems**, Kyushu Institute of Technology.
+        At the **Department of Intelligent and Control Systems**, Kyushu
+        Institute of Technology, we design controllers that let robots move
+        with the adaptivity of living things. By drawing on principles from
+        neural computation, the free energy principle, and human movement, we
+        turn models of biological motor control into continuous-time
+        controllers for robot arms — and let the robots, in turn, reveal where
+        our understanding of the brain and body still falls short.
       media:
         src: research-hero.png
         alt: Anime-style illustration of a humanoid robot with a visible brain and nervous system, studied by robotic arms in a neuroscience laboratory.
