@@ -24,6 +24,26 @@ sections:
     design:
       layout: split-left
 
+  - block: collection
+    id: news
+    content:
+      title: Recent News
+      subtitle: ''
+      page_type: blog
+      count: 3
+      filters:
+        author: ''
+        category: ''
+        tag: ''
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ''
+      offset: 0
+      order: desc
+    design:
+      view: card
+
   - block: focus-areas
     content:
       title: Research Theme
@@ -46,26 +66,6 @@ sections:
           image: research-themes/liquid-neural-networks.png
     design:
       layout: cards
-
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      page_type: blog
-      count: 3
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      offset: 0
-      order: desc
-    design:
-      view: card
 
   - block: collection
     id: papers
