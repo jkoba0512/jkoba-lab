@@ -17,7 +17,8 @@ status:
 role: Associate Professor
 bio: |
   Working on biologically-inspired robotics — liquid neural networks, active
-  inference, and computational neuroscience for robot arm control — at the
+  inference, and computational neuroscience for robotic systems, from robot
+  arms to humanoids and other embodied platforms — at the
   Department of Intelligent and Control Systems, Kyushu Institute of Technology.
 
 # 日本語: 九州工業大学 大学院情報工学研究院 知的システム工学研究系
@@ -43,7 +44,7 @@ interests:
   - Liquid Neural Networks (CfC / LNN)
   - Active Inference / Free Energy Principle
   - Computational Neuroscience
-  - Robot Arm Control
+  - Robotic Systems Control
   - Musculoskeletal Simulation
 
 education:
@@ -119,4 +120,3 @@ awards:
       "フレキシブルマニピュレータの適応形予測制御"
       (J. Kobayashi, H. Ogawa, F. Ohkawa).
     icon: hero/trophy
-
