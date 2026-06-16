@@ -42,7 +42,7 @@ sections:
       offset: 0
       order: desc
     design:
-      view: card
+      view: news
 
   - block: focus-areas
     content:
