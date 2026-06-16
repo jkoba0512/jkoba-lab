@@ -15,7 +15,8 @@ sections:
         with the adaptivity of living things. By drawing on principles from
         neural computation, the free energy principle, and human movement, we
         turn models of biological motor control into continuous-time
-        controllers for robot arms — and let the robots, in turn, reveal where
+        controllers for robotic systems, from robot arms to humanoids and other
+        embodied platforms, and let the robots, in turn, reveal where
         our understanding of the brain and body still falls short.
       media:
         src: research-hero.png
@@ -75,7 +76,7 @@ sections:
       archive:
         enable: true
         text: See all publications
-        link: /publications/
+        link: publications/
       filters:
         folders:
           - publications

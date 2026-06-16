@@ -3,6 +3,7 @@
 {{ $year_value := $item.Params.event_start | default $item.Date }}
 {{ $year := (time $year_value).Format "2006" }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $is_preprint := in ($item.Params.publication_types | default slice) "manuscript" }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
@@ -14,7 +15,7 @@
     {{ partial "page_metadata_authors" $item }}
   </span>
   ({{- $year -}}).
-  <span class="font-semibold">{{ $item.Title }}</span>.
+  <span class="font-semibold">{{ $item.Title }}</span>{{ if $is_preprint }} <span class="inline-flex items-center rounded border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-xs font-medium text-amber-800 dark:border-amber-600 dark:bg-amber-950/40 dark:text-amber-200">Preprint</span>{{ end }}.
   {{ if $item.Params.publication_short }}
     {{- $item.Params.publication_short | markdownify -}}.
   {{ else if $item.Params.publication }}
@@ -33,7 +34,7 @@
   <span class="article-metadata li-cite-author">
     {{ partial "page_metadata_authors" $item }}.
   </span>
-  <span class="font-semibold">{{ $item.Title }}</span>.
+  <span class="font-semibold">{{ $item.Title }}</span>{{ if $is_preprint }} <span class="inline-flex items-center rounded border border-amber-300 bg-amber-50 px-1.5 py-0.5 text-xs font-medium text-amber-800 dark:border-amber-600 dark:bg-amber-950/40 dark:text-amber-200">Preprint</span>{{ end }}.
   {{ if $item.Params.publication_short }}
     {{- $item.Params.publication_short | markdownify -}},
   {{ else if $item.Params.publication }}
