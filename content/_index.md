@@ -94,20 +94,23 @@ sections:
             Bodies are not just machines to be controlled; their muscles,
             sensors, and dynamics shape the computation itself. Musculoskeletal
             simulations help us test ideas about biological motor control.
-        - name: Self-tuning sensory correction
-          icon: hero/arrow-path
+        - name: Adaptive sensory weighting in musculoskeletal reaching
+          icon: hero/adjustments-horizontal
           description: |-
-            When a robot predicts its own movement, it also has to decide how
-            strongly to trust incoming sensory errors. We study how that
-            correction gain can adapt during muscle-driven reaching, especially
-            when sensory feedback is delayed.
-        - name: Estimating goals under uncertain senses
-          icon: hero/eye
-          description: |-
-            Reaching depends on combining vision, body sense, prediction, and
-            prior expectations. We study how a musculoskeletal model can weight
-            these information sources by reliability, and what must change when
-            a normally trusted source becomes misleading.
+            Reaching requires a model to decide how much it should trust vision,
+            body sense, prediction, and prior expectations. We study both how
+            sensory-error correction gains can adapt under delay and how
+            reliability-weighted target estimation changes when trusted sources
+            become misleading.<br><br>
+            Related preprints:<br>
+            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
+            Prediction-Error Correction Gain: Closed-Loop Evidence from a
+            Muscle-Driven Reaching Task</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
+            <strong>Reliability-weighted target-position estimation in a
+            musculoskeletal arm model: adaptive priors and learned source
+            weighting under violations of fixed-precision assumptions</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid
 
