@@ -23,6 +23,7 @@ sections:
         alt: Anime-style illustration of a humanoid robot with a visible brain and nervous system, studied by robotic arms in a neuroscience laboratory.
     design:
       layout: split-left
+      size: compact
 
   - block: collection
     id: news

@@ -17,4 +17,11 @@
   {{ with $item.Params.summary | default $item.Summary }}
     <p class="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{{ . | plainify }}</p>
   {{ end }}
+
+  {{ with $item.Params.paper_doi }}
+    {{ $paper_url := $item.Params.paper_url | default (printf "https://doi.org/%s" .) }}
+    <p class="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+      DOI: <a class="font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300" href="{{ $paper_url }}" target="_blank" rel="noopener">{{ . }}</a>
+    </p>
+  {{ end }}
 </article>

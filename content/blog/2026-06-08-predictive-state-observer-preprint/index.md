@@ -1,7 +1,9 @@
 ---
 title: "Preprint posted: Predictive state observer gain adaptation"
 date: "2026-06-08T00:00:00Z"
-summary: "A new bioRxiv preprint on sensory prediction-error correction gain adaptation in a muscle-driven reaching task is now available. DOI: 10.64898/2026.06.03.729790."
+summary: "A new bioRxiv preprint on sensory prediction-error correction gain adaptation in a muscle-driven reaching task is now available."
+paper_doi: "10.64898/2026.06.03.729790"
+paper_url: "https://doi.org/10.64898/2026.06.03.729790"
 authors:
   - me
 tags:
