@@ -1,0 +1,8 @@
+climbing-fiber-readout-adaptation.png
+
+Source image: Neurons (Purkinje cells)
+URL: https://commons.wikimedia.org/wiki/File:Neurons_(Purkinje_cells).jpg
+License: CC0 1.0 Universal Public Domain Dedication
+
+The source image was cropped and overlaid with climbing-fiber and controller
+adaptation cues for the selected research topic illustration.
