@@ -1,0 +1,9 @@
+myoArm.png
+
+Source: MyoSuite documentation, Suite page
+URL: https://myosuite.readthedocs.io/en/stable/suite.html
+Project repository: https://github.com/MyoHub/myosuite
+License: Apache License 2.0
+
+The image is used as the musculoskeletal model panel in
+assets/media/selected-topics/adaptive-sensory-weighting.svg.

@@ -76,26 +76,10 @@ sections:
         Short introductions to some of our research directions, written for
         readers who want the main idea before going into the technical details.
       items:
-        - name: Continuous-time neural controllers
-          icon: hero/cpu-chip
-          description: |-
-            Robots move in continuous time, but many neural controllers are
-            trained as if time advances in fixed steps. We study liquid neural
-            networks and related models that naturally describe ongoing motion.
-        - name: Active inference for embodied robots
-          icon: hero/adjustments-horizontal
-          description: |-
-            Active inference treats action as a way to reduce the gap between
-            what a robot predicts and what it senses. This gives us a principled
-            way to connect perception, uncertainty, and movement.
-        - name: Learning from the body
-          icon: hero/user
-          description: |-
-            Bodies are not just machines to be controlled; their muscles,
-            sensors, and dynamics shape the computation itself. Musculoskeletal
-            simulations help us test ideas about biological motor control.
         - name: Adaptive sensory weighting in musculoskeletal reaching
           icon: hero/adjustments-horizontal
+          image: selected-topics/adaptive-sensory-weighting.svg
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
           description: |-
             Reaching requires a model to decide how much it should trust vision,
             body sense, prediction, and prior expectations. We study both how
