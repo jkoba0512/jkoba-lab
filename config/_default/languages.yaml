@@ -5,18 +5,30 @@
 # Default language
 en:
   locale: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  label: English
+  weight: 1
 
-# Uncomment the lines below to configure your website in a second language.
-#zh:
-#  locale: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1
+ja:
+  locale: ja
+  label: 日本語
+  weight: 2
+  menu:
+    main:
+      - name: Home
+        url: https://jkoba0512.github.io/jkoba-lab/ja/
+        weight: 10
+      - name: Research
+        url: https://jkoba0512.github.io/jkoba-lab/projects/
+        weight: 20
+      - name: People
+        url: https://jkoba0512.github.io/jkoba-lab/people/
+        weight: 30
+      - name: Publications
+        url: https://jkoba0512.github.io/jkoba-lab/publications/
+        weight: 40
+      - name: News
+        url: https://jkoba0512.github.io/jkoba-lab/ja/#news
+        weight: 50
+      - name: About
+        url: https://jkoba0512.github.io/jkoba-lab/about/
+        weight: 60

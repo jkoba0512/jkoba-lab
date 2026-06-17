@@ -13,7 +13,7 @@ baseURL: 'https://jkoba0512.github.io/jkoba-lab/'
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: false
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 

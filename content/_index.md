@@ -49,21 +49,39 @@ sections:
     content:
       title: Research Theme
       subtitle: |-
-        We fuse these perspectives — a biological grounding, a guiding
-        principle, and a computational substrate — into a single approach to
-        adaptive, biologically-inspired motor control.
+        We integrate the mechanisms that support biological movement, the
+        theories that explain their underlying principles, and the computational
+        models that implement them to realize biologically-inspired robot
+        control that can adapt to changes in the environment and the body.
       items:
         - name: Computational Neuroscience
           description: |-
-            **The biological grounding.** Models of human and biological motor control set the targets and constraints that *Active Inference* formalizes and *Liquid Neural Networks* implement — and the robot, in turn, surfaces gaps in our biological understanding.
+            **The biological grounding.**
+
+            We aim to understand the mechanisms of human and animal motor
+            control through theory and computational models. Biological insight
+            defines the goals and constraints that robot control should satisfy.
+            By testing these theories on robots, we also reveal open questions
+            in biological motor control.
           image: research-themes/computational-neuroscience.png
         - name: Active Inference
           description: |-
-            **The guiding principle.** The free energy principle links the neuroscience grounding to the network substrate, turning prediction and uncertainty into goal-directed control of robot arms.
+            **The principle for explaining movement.**
+
+            Based on the free energy principle, active inference provides a
+            unified framework for perception, prediction, and action. It offers
+            principles for generating goal-directed behavior under uncertainty
+            and serves as a theoretical foundation for adaptive robot control.
           image: research-themes/active-inference.png
-        - name: Liquid Neural Networks
+        - name: "Liquid Neural Networks (LNN)"
           description: |-
-            **The computational substrate.** CfC / LNN realize the active-inference controller as continuous-time dynamics — the trainable body that the neuroscience grounds and the inference principle drives.
+            **The computational substrate.**
+
+            Liquid Neural Networks, including CfC (Closed-form Continuous-time
+            Networks), are neural network models for implementing
+            active-inference-based controllers as continuous-time dynamics. By
+            flexibly changing their internal states in response to changes in
+            the environment and the body, they support adaptive robot control.
           image: research-themes/liquid-neural-networks.png
     design:
       layout: cards
@@ -81,11 +99,14 @@ sections:
           image: selected-topics/adaptive-sensory-weighting.svg
           image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
           description: |-
-            Reaching requires a model to decide how much it should trust vision,
-            body sense, prediction, and prior expectations. We study both how
-            sensory-error correction gains can adapt under delay and how
-            reliability-weighted target estimation changes when trusted sources
-            become misleading.<br><br>
+            When we reach for a target, we combine several kinds of information:
+            what we see, what our muscles and joints tell us about the arm,
+            what we have learned from past experience, and what we predict will
+            happen next. But these sources are not always equally reliable.
+            Vision can be delayed, and a source that usually helps can sometimes
+            become misleading. This research uses a musculoskeletal robot model
+            to study how a controller should decide which information to trust,
+            and by how much, when reaching under such uncertainty.<br><br>
             Related preprints:<br>
             <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
             Prediction-Error Correction Gain: Closed-Loop Evidence from a
@@ -99,14 +120,18 @@ sections:
           icon: hero/bolt
           image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
           description: |-
-            Robots and biological bodies both need to keep moving well when the
-            relationship between motor commands and movement suddenly changes.
-            We study whether a continuous-time neural controller can stay
-            mostly frozen, while a small readout layer adapts online from an
-            error signal similar to cerebellar climbing-fiber feedback. In a
-            force-field reaching task, this simple adaptation straightens
-            perturbed movements and produces after-effects when the force field
-            is removed, a hallmark of internal-model learning.<br><br>
+            Robots and human bodies can fail to move as expected when the same
+            motor command is used under new conditions, such as carrying a load
+            or being pushed by an external force. To keep moving well, the
+            controller needs a way to detect the error and gradually adjust the
+            movement. This research studies whether a continuous-time neural
+            controller can adapt online by changing only a small readout layer,
+            using an error signal inspired by cerebellar climbing fibers. In a
+            reaching task where an external force pushes the arm sideways, this
+            adaptation makes the movement straighter again. When the force is
+            removed, the model also shows a residual error in the opposite
+            direction, an after-effect that indicates the controller has learned
+            an internal model of the body and environment.<br><br>
             Related preprint:<br>
             <strong>Climbing-fiber-like online readout adaptation in frozen
             continuous-time networks reproduces force-field adaptation and
