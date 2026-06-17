@@ -95,6 +95,22 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          description: |-
+            Robots and biological bodies both need to keep moving well when the
+            relationship between motor commands and movement suddenly changes.
+            We study whether a continuous-time neural controller can stay
+            mostly frozen, while a small readout layer adapts online from an
+            error signal similar to cerebellar climbing-fiber feedback. In a
+            force-field reaching task, this simple adaptation straightens
+            perturbed movements and produces after-effects when the force field
+            is removed, a hallmark of internal-model learning.<br><br>
+            Related preprint:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
     design:
       layout: grid
 
