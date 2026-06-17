@@ -22,14 +22,15 @@ function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false}) 
 
   const titleSize = large ? "text-2xl lg:text-3xl" : isCard ? "text-lg lg:text-xl" : "text-xl";
   const descSize = large ? "text-base lg:text-lg" : "text-sm lg:text-base";
-  const showTopImage = imgData?.src && variant === "grid";
+  const topImageSrc = item.image_src || imgData?.src;
+  const showTopImage = topImageSrc && variant === "grid";
 
   return (
     <div class={wrapperCls}>
       {showTopImage ? (
         <div class="mb-5 w-full max-w-sm">
           <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-            <img src={imgData.src} alt={item.name || ""} class="block aspect-[8/3] w-full object-cover" loading="lazy" />
+            <img src={topImageSrc} alt={item.name || ""} class="block aspect-[8/3] w-full object-cover" loading="lazy" />
           </div>
           {item.image_caption && (
             <p class="mt-1.5 text-xs leading-snug text-gray-500 dark:text-gray-400" dangerouslySetInnerHTML={{__html: renderText(item.image_caption)}} />

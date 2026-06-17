@@ -97,7 +97,7 @@ sections:
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
         - name: Climbing-fiber-like online readout adaptation
           icon: hero/bolt
-          image: selected-topics/climbing-fiber-readout-adaptation.png
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
           description: |-
             Robots and biological bodies both need to keep moving well when the
             relationship between motor commands and movement suddenly changes.
