@@ -85,6 +85,18 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
+        - name: Reach-and-hold posture stabilization
+          icon: hero/hand-raised
+          image_src: /jkoba-lab/media/selected-topics/myoArm.png
+          image_fit: contain
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            腕をある姿勢で止めておくことは、固定された命令を出すだけでは実現できません。冗長な筋骨格アームでは、重力、筋の幾何、局所的な力学によって、一見もっともらしい姿勢が不安定な平衡点になることがあります。この研究では、MyoSuite の myoArm モデルを使い、固定された平衡点制御、共収縮、インピーダンス制御、重力補償、逆静力学コマンドを比較しています。その結果、これらの固定・非学習コントローラはいずれも目標近傍で安定な保持を実現できませんでした。したがって問題は、平衡点をどこに置くかだけでなく、閉ループの身体を安定化できるかどうかにあります。<br><br>
+            関連プレプリント:<br>
+            <strong>Reach-and-hold at a musculoskeletal arm posture is an
+            unstable-equilibrium stabilization problem: the limits of fixed
+            equilibrium-point and impedance controllers</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
     design:
       layout: grid
 

@@ -24,13 +24,17 @@ function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false}) 
   const descSize = large ? "text-base lg:text-lg" : "text-sm lg:text-base";
   const topImageSrc = item.image_src || imgData?.src;
   const showTopImage = topImageSrc && variant === "grid";
+  const imageContain = item.image_fit === "contain";
+  const imageFit = imageContain ? "object-contain bg-black" : "object-cover";
+  const imageAspect = imageContain ? "aspect-[4/3]" : "aspect-[8/3]";
+  const imageWidth = item.image_size === "compact" ? "max-w-xs" : "max-w-sm";
 
   return (
     <div class={wrapperCls}>
       {showTopImage ? (
-        <div class="mb-5 w-full max-w-sm">
+        <div class={`mb-5 w-full ${imageWidth}`}>
           <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-            <img src={topImageSrc} alt={item.name || ""} class="block aspect-[8/3] w-full object-cover" loading="lazy" />
+            <img src={topImageSrc} alt={item.name || ""} class={`block ${imageAspect} w-full ${imageFit}`} loading="lazy" />
           </div>
           {item.image_caption && (
             <p class="mt-1.5 text-xs leading-snug text-gray-500 dark:text-gray-400" dangerouslySetInnerHTML={{__html: renderText(item.image_caption)}} />

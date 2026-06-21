@@ -116,6 +116,28 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
+        - name: Reach-and-hold posture stabilization
+          icon: hero/hand-raised
+          image_src: /jkoba-lab/media/selected-topics/myoArm.png
+          image_fit: contain
+          image_size: compact
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            Holding an arm still is not as simple as sending a fixed command.
+            In a redundant musculoskeletal arm, gravity, muscle geometry, and
+            local dynamics can turn an apparently reasonable posture into an
+            unstable equilibrium. This research uses the MyoSuite myoArm model
+            to test fixed equilibrium-point, co-contraction, impedance,
+            gravity-compensation, and inverse-statics controllers. The result is
+            that none of these fixed, non-learning controllers produces a stable
+            near-target hold, even when the commanded equilibrium is close to
+            the goal. The problem is therefore not just where the equilibrium is
+            placed, but whether the closed-loop body can stabilize it.<br><br>
+            Related preprint:<br>
+            <strong>Reach-and-hold at a musculoskeletal arm posture is an
+            unstable-equilibrium stabilization problem: the limits of fixed
+            equilibrium-point and impedance controllers</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
     design:
       layout: grid
 
