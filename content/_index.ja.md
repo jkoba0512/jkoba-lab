@@ -29,8 +29,6 @@ sections:
       text: |-
         - **2026-06-20**: [Preprint posted: Reach-and-hold at a musculoskeletal arm posture](/jkoba-lab/blog/2026-06-20-reach-hold-preprint/)  
           DOI: [10.64898/2026.06.15.732510](https://doi.org/10.64898/2026.06.15.732510)
-        - **2026-06-15**: [Preprint posted: Climbing-fiber-like online readout adaptation](/jkoba-lab/blog/2026-06-15-climbing-fiber-preprint/)  
-          bioRxiv のメタデータ修正待ち
         - **2026-06-11**: [Preprint posted: Reliability-weighted target-position estimation](/jkoba-lab/blog/2026-06-11-reliability-weighted-preprint/)  
           DOI: [10.64898/2026.06.08.730995](https://doi.org/10.64898/2026.06.08.730995)
         - **2026-06-08**: [Preprint posted: Predictive state observer gain adaptation](/jkoba-lab/blog/2026-06-08-predictive-state-observer-preprint/)  

@@ -1,6 +1,7 @@
 ---
 title: "Preprint posted: Climbing-fiber-like online readout adaptation"
 date: "2026-06-15T00:00:00Z"
+draft: true
 summary: "A new bioRxiv preprint on climbing-fiber-like online readout adaptation in frozen continuous-time networks is now available."
 authors:
   - me
