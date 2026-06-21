@@ -85,16 +85,6 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
-        - name: Climbing-fiber-like online readout adaptation
-          icon: hero/bolt
-          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
-          description: |-
-            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。それでもうまく動くためには、ずれを見つけて動かし方を少しずつ直す仕組みが必要です。この研究では、小脳の登上線維が運ぶ誤差信号のような情報を手がかりにして、連続時間ニューラルコントローラの一部だけをオンラインで調整する方法を調べています。腕の動きを横から押し曲げるような外力を加えた課題では、この調整によって動きが再びまっすぐに近づきます。また、その外力を取り除いた後に逆向きのずれが現れる「残効」も再現されます。これは、身体の動かし方を内部で学習したことを示す重要な特徴です。<br><br>
-            関連プレプリント:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
-            bioRxiv のメタデータ修正待ち。
     design:
       layout: grid
 
