@@ -136,7 +136,7 @@ sections:
             <strong>Climbing-fiber-like online readout adaptation in frozen
             continuous-time networks reproduces force-field adaptation and
             after-effects</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+            bioRxiv record pending metadata correction.
     design:
       layout: grid
 

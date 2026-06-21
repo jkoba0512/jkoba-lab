@@ -28,7 +28,7 @@ sections:
       title: 最近のニュース
       text: |-
         - **2026-06-15**: [Preprint posted: Climbing-fiber-like online readout adaptation](/jkoba-lab/blog/2026-06-15-climbing-fiber-preprint/)  
-          DOI: [10.64898/2026.06.11.731593](https://doi.org/10.64898/2026.06.11.731593)
+          bioRxiv のメタデータ修正待ち
         - **2026-06-11**: [Preprint posted: Reliability-weighted target-position estimation](/jkoba-lab/blog/2026-06-11-reliability-weighted-preprint/)  
           DOI: [10.64898/2026.06.08.730995](https://doi.org/10.64898/2026.06.08.730995)
         - **2026-06-08**: [Preprint posted: Predictive state observer gain adaptation](/jkoba-lab/blog/2026-06-08-predictive-state-observer-preprint/)  
@@ -94,7 +94,7 @@ sections:
             <strong>Climbing-fiber-like online readout adaptation in frozen
             continuous-time networks reproduces force-field adaptation and
             after-effects</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+            bioRxiv のメタデータ修正待ち。
     design:
       layout: grid
 
