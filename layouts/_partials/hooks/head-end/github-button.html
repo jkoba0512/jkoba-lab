@@ -1,1 +1,37 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<style>
+  @media (min-width: 1024px) {
+    .navbar-brand,
+    #nav-menu {
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
+    #nav-menu > :not([hidden]) ~ :not([hidden]) {
+      margin-left: 0.75rem !important;
+    }
+
+    #nav-menu .nav-link {
+      white-space: nowrap;
+    }
+
+    [data-hb-language-chooser] {
+      min-width: 2.25rem;
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    #nav-menu > :not([hidden]) ~ :not([hidden]) {
+      margin-left: 0.5rem !important;
+    }
+
+    #nav-menu .nav-link {
+      font-size: 0.9rem;
+    }
+
+    [data-hb-language-chooser] span {
+      display: none;
+    }
+  }
+</style>
