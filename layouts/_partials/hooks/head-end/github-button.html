@@ -21,15 +21,22 @@
       link.removeAttribute('rel')
     }
 
+    const fixPublicationsLink = (link) => {
+      if (link.closest('#nav-menu') && link.textContent.trim() === 'Publications') {
+        link.setAttribute('href', '/jkoba-lab/publications/')
+      }
+    }
+
     const normalizeLinks = () => {
-      document.querySelectorAll('a').forEach(normalizeLink)
+      document.querySelectorAll('a').forEach((link) => {
+        fixPublicationsLink(link)
+        normalizeLink(link)
+      })
     }
 
     const fixJapaneseNavPublications = () => {
       document.querySelectorAll('#nav-menu a').forEach((link) => {
-        if (link.textContent.trim() === 'Publications') {
-          link.setAttribute('href', '/jkoba-lab/publications/')
-        }
+        fixPublicationsLink(link)
       })
     }
 
@@ -42,7 +49,12 @@
       'click',
       (event) => {
         const link = event.target.closest('a')
-        if (link) normalizeLink(link)
+        if (!link) return
+        fixPublicationsLink(link)
+        if (!isSiteLink(link)) return
+        normalizeLink(link)
+        event.preventDefault()
+        window.location.href = link.href
       },
       true
     )
