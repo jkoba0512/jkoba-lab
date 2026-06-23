@@ -48,7 +48,8 @@
     document.addEventListener(
       'click',
       (event) => {
-        const link = event.target.closest('a')
+        const target = event.target instanceof Element ? event.target : event.target.parentElement
+        const link = target?.closest('a')
         if (!link) return
         fixPublicationsLink(link)
         if (!isSiteLink(link)) return
