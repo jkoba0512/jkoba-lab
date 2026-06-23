@@ -116,6 +116,27 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          description: |-
+            Robots and human bodies can fail to move as expected when the same
+            motor command is used under new conditions, such as carrying a load
+            or being pushed by an external force. To keep moving well, the
+            controller needs a way to detect the error and gradually adjust the
+            movement. This research studies whether a continuous-time neural
+            controller can adapt online by changing only a small readout layer,
+            using an error signal inspired by cerebellar climbing fibers. In a
+            reaching task where an external force pushes the arm sideways, this
+            adaptation makes the movement straighter again. When the force is
+            removed, the model also shows a residual error in the opposite
+            direction, an after-effect that indicates the controller has learned
+            an internal model of the body and environment.<br><br>
+            Related preprint:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
         - name: Reach-and-hold posture stabilization
           icon: hero/hand-raised
           image_src: /jkoba-lab/media/selected-topics/myoArm.png
@@ -138,27 +159,6 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
-        - name: Climbing-fiber-like online readout adaptation
-          icon: hero/bolt
-          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
-          description: |-
-            Robots and human bodies can fail to move as expected when the same
-            motor command is used under new conditions, such as carrying a load
-            or being pushed by an external force. To keep moving well, the
-            controller needs a way to detect the error and gradually adjust the
-            movement. This research studies whether a continuous-time neural
-            controller can adapt online by changing only a small readout layer,
-            using an error signal inspired by cerebellar climbing fibers. In a
-            reaching task where an external force pushes the arm sideways, this
-            adaptation makes the movement straighter again. When the force is
-            removed, the model also shows a residual error in the opposite
-            direction, an after-effect that indicates the controller has learned
-            an internal model of the body and environment.<br><br>
-            Related preprint:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
     design:
       layout: grid
 
