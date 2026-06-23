@@ -1,17 +1,52 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#nav-menu a[target="_blank"]').forEach((link) => {
+  (() => {
+    const siteOrigin = 'https://jkoba0512.github.io'
+    const sitePath = '/jkoba-lab/'
+
+    const isSiteLink = (link) => {
+      const href = link.getAttribute('href')
+      if (!href || href.startsWith('#')) return false
+      try {
+        const url = new URL(href, window.location.origin)
+        return url.origin === window.location.origin || (url.origin === siteOrigin && url.pathname.startsWith(sitePath))
+      } catch {
+        return false
+      }
+    }
+
+    const normalizeLink = (link) => {
+      if (!isSiteLink(link)) return
       link.removeAttribute('target')
       link.removeAttribute('rel')
+    }
+
+    const normalizeLinks = () => {
+      document.querySelectorAll('a').forEach(normalizeLink)
+    }
+
+    const fixJapaneseNavPublications = () => {
+      document.querySelectorAll('#nav-menu a').forEach((link) => {
+        if (link.textContent.trim() === 'Publications') {
+          link.setAttribute('href', '/jkoba-lab/publications/')
+        }
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fixJapaneseNavPublications()
+      normalizeLinks()
     })
 
-    document.querySelectorAll('#nav-menu a').forEach((link) => {
-      if (link.textContent.trim() === 'Publications') {
-        link.setAttribute('href', '/jkoba-lab/publications/')
-      }
-    })
-  })
+    document.addEventListener(
+      'click',
+      (event) => {
+        const link = event.target.closest('a')
+        if (link) normalizeLink(link)
+      },
+      true
+    )
+  })()
 </script>
 <style>
   @media (min-width: 1024px) {
