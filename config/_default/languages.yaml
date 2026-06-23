@@ -15,20 +15,20 @@ ja:
   menu:
     main:
       - name: Home
-        url: https://jkoba0512.github.io/jkoba-lab/ja/
+        url: https://jkoba0512.github.io/jkoba-lab/
         weight: 10
       - name: Research
-        url: https://jkoba0512.github.io/jkoba-lab/projects/
-        weight: 20
+        url: https://jkoba0512.github.io/jkoba-lab/#section-focus-areas
+        weight: 30
       - name: People
         url: https://jkoba0512.github.io/jkoba-lab/people/
-        weight: 30
+        weight: 40
       - name: Publications
         url: https://jkoba0512.github.io/jkoba-lab/publications/
-        weight: 40
-      - name: News
-        url: https://jkoba0512.github.io/jkoba-lab/ja/#news
         weight: 50
+      - name: News
+        url: https://jkoba0512.github.io/jkoba-lab/#news
+        weight: 20
       - name: About
         url: https://jkoba0512.github.io/jkoba-lab/about/
         weight: 60

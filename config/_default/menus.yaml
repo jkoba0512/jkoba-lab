@@ -5,17 +5,17 @@ main:
     url: /
     weight: 10
   - name: Research
-    url: /projects/
-    weight: 20
+    url: /#section-focus-areas
+    weight: 30
   - name: People
     url: /people/
-    weight: 30
+    weight: 40
   - name: Publications
     url: /publications/
-    weight: 40
+    weight: 50
   - name: News
     url: /#news
-    weight: 50
+    weight: 20
   - name: About
     url: /about/
     weight: 60
