@@ -29,6 +29,8 @@ sections:
       text: |-
         - **2026-06-20**: [Preprint posted: Reach-and-hold at a musculoskeletal arm posture](/jkoba-lab/blog/2026-06-20-reach-hold-preprint/)  
           DOI: [10.64898/2026.06.15.732510](https://doi.org/10.64898/2026.06.15.732510)
+        - **2026-06-15**: [Preprint posted: Climbing-fiber-like online readout adaptation](/jkoba-lab/blog/2026-06-15-climbing-fiber-preprint/)  
+          DOI: [10.64898/2026.06.11.731593](https://doi.org/10.64898/2026.06.11.731593)
         - **2026-06-11**: [Preprint posted: Reliability-weighted target-position estimation](/jkoba-lab/blog/2026-06-11-reliability-weighted-preprint/)  
           DOI: [10.64898/2026.06.08.730995](https://doi.org/10.64898/2026.06.08.730995)
         - **2026-06-08**: [Preprint posted: Predictive state observer gain adaptation](/jkoba-lab/blog/2026-06-08-predictive-state-observer-preprint/)  
@@ -97,6 +99,16 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          description: |-
+            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。それでもうまく動くためには、ずれを見つけて動かし方を少しずつ直す仕組みが必要です。この研究では、小脳の登上線維が運ぶ誤差信号のような情報を手がかりにして、連続時間ニューラルコントローラの一部だけをオンラインで調整する方法を調べています。腕の動きを横から押し曲げるような外力を加えた課題では、この調整によって動きが再びまっすぐに近づきます。また、その外力を取り除いた後に逆向きのずれが現れる「残効」も再現されます。これは、身体の動かし方を内部で学習したことを示す重要な特徴です。<br><br>
+            関連プレプリント:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
     design:
       layout: grid
 
