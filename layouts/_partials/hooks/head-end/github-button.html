@@ -1,4 +1,18 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#nav-menu a[target="_blank"]').forEach((link) => {
+      link.removeAttribute('target')
+      link.removeAttribute('rel')
+    })
+
+    document.querySelectorAll('#nav-menu a').forEach((link) => {
+      if (link.textContent.trim() === 'Publications') {
+        link.setAttribute('href', '/jkoba-lab/publications/')
+      }
+    })
+  })
+</script>
 <style>
   @media (min-width: 1024px) {
     .navbar-brand,
