@@ -74,6 +74,37 @@ sections:
       text: |-
         研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。
       items:
+        - name: Precision-controlled sensory reweighting in quiet standing
+          icon: hero/scale
+          image: selected-topics/quiet-standing-sensory-reweighting.svg
+          description: |-
+            静かに立っているとき、私たちは前庭感覚、固有感覚、視覚を組み合わせながら姿勢を保っています。ただし、それぞれの情報をいつも同じ強さで信頼すればよいわけではありません。たとえば視覚が揺らされて信頼しにくい状況では、視覚の影響を弱めつつ、他の感覚と制御ループは使い続ける必要があります。この研究では、静止立位を 1 リンク倒立振子として表し、連続時間の能動的推論モデルによって感覚再重み付けを調べています。姿勢推定と足関節トルクの生成を同じ自由エネルギー目的関数で扱い、文脈に応じて各感覚予測誤差の precision を選択的に変えることで、信頼性の変化が知覚から姿勢制御へどのように伝わるかを説明します。<br><br>
+            関連プレプリント:<br>
+            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            Reweighting in Quiet Standing</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
+        - name: Reach-and-hold posture stabilization
+          icon: hero/hand-raised
+          image_src: /jkoba-lab/media/selected-topics/myoArm.png
+          image_fit: contain
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            腕をある姿勢で止めておくことは、固定された命令を出すだけでは実現できません。冗長な筋骨格アームでは、重力、筋の幾何、局所的な力学によって、一見もっともらしい姿勢が不安定な平衡点になることがあります。この研究では、MyoSuite の myoArm モデルを使い、固定された平衡点制御、共収縮、インピーダンス制御、重力補償、逆静力学コマンドを比較しています。その結果、これらの固定・非学習コントローラはいずれも目標近傍で安定な保持を実現できませんでした。したがって問題は、平衡点をどこに置くかだけでなく、閉ループの身体を安定化できるかどうかにあります。<br><br>
+            関連プレプリント:<br>
+            <strong>Reach-and-hold at a musculoskeletal arm posture is an
+            unstable-equilibrium stabilization problem: the limits of fixed
+            equilibrium-point and impedance controllers</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          description: |-
+            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。それでもうまく動くためには、ずれを見つけて動かし方を少しずつ直す仕組みが必要です。この研究では、小脳の登上線維が運ぶ誤差信号のような情報を手がかりにして、連続時間ニューラルコントローラの一部だけをオンラインで調整する方法を調べています。腕の動きを横から押し曲げるような外力を加えた課題では、この調整によって動きが再びまっすぐに近づきます。また、その外力を取り除いた後に逆向きのずれが現れる「残効」も再現されます。これは、身体の動かし方を内部で学習したことを示す重要な特徴です。<br><br>
+            関連プレプリント:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
         - name: Adaptive sensory weighting in musculoskeletal reaching
           icon: hero/adjustments-horizontal
           image: selected-topics/adaptive-sensory-weighting.svg
@@ -89,37 +120,6 @@ sections:
             musculoskeletal arm model: adaptive priors and learned source
             weighting under violations of fixed-precision assumptions</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
-        - name: Climbing-fiber-like online readout adaptation
-          icon: hero/bolt
-          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
-          description: |-
-            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。それでもうまく動くためには、ずれを見つけて動かし方を少しずつ直す仕組みが必要です。この研究では、小脳の登上線維が運ぶ誤差信号のような情報を手がかりにして、連続時間ニューラルコントローラの一部だけをオンラインで調整する方法を調べています。腕の動きを横から押し曲げるような外力を加えた課題では、この調整によって動きが再びまっすぐに近づきます。また、その外力を取り除いた後に逆向きのずれが現れる「残効」も再現されます。これは、身体の動かし方を内部で学習したことを示す重要な特徴です。<br><br>
-            関連プレプリント:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
-        - name: Reach-and-hold posture stabilization
-          icon: hero/hand-raised
-          image_src: /jkoba-lab/media/selected-topics/myoArm.png
-          image_fit: contain
-          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
-          description: |-
-            腕をある姿勢で止めておくことは、固定された命令を出すだけでは実現できません。冗長な筋骨格アームでは、重力、筋の幾何、局所的な力学によって、一見もっともらしい姿勢が不安定な平衡点になることがあります。この研究では、MyoSuite の myoArm モデルを使い、固定された平衡点制御、共収縮、インピーダンス制御、重力補償、逆静力学コマンドを比較しています。その結果、これらの固定・非学習コントローラはいずれも目標近傍で安定な保持を実現できませんでした。したがって問題は、平衡点をどこに置くかだけでなく、閉ループの身体を安定化できるかどうかにあります。<br><br>
-            関連プレプリント:<br>
-            <strong>Reach-and-hold at a musculoskeletal arm posture is an
-            unstable-equilibrium stabilization problem: the limits of fixed
-            equilibrium-point and impedance controllers</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
-        - name: Precision-controlled sensory reweighting in quiet standing
-          icon: hero/scale
-          image: selected-topics/quiet-standing-sensory-reweighting.svg
-          description: |-
-            静かに立っているとき、私たちは前庭感覚、固有感覚、視覚を組み合わせながら姿勢を保っています。ただし、それぞれの情報をいつも同じ強さで信頼すればよいわけではありません。たとえば視覚が揺らされて信頼しにくい状況では、視覚の影響を弱めつつ、他の感覚と制御ループは使い続ける必要があります。この研究では、静止立位を 1 リンク倒立振子として表し、連続時間の能動的推論モデルによって感覚再重み付けを調べています。姿勢推定と足関節トルクの生成を同じ自由エネルギー目的関数で扱い、文脈に応じて各感覚予測誤差の precision を選択的に変えることで、信頼性の変化が知覚から姿勢制御へどのように伝わるかを説明します。<br><br>
-            関連プレプリント:<br>
-            <strong>Precision-Controlled Active Inference Accounts for Sensory
-            Reweighting in Quiet Standing</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
     design:
       layout: grid
 

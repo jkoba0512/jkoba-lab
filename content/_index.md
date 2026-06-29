@@ -94,49 +94,26 @@ sections:
         Short introductions to some of our research directions, written for
         readers who want the main idea before going into the technical details.
       items:
-        - name: Adaptive sensory weighting in musculoskeletal reaching
-          icon: hero/adjustments-horizontal
-          image: selected-topics/adaptive-sensory-weighting.svg
-          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+        - name: Precision-controlled sensory reweighting in quiet standing
+          icon: hero/scale
+          image: selected-topics/quiet-standing-sensory-reweighting.svg
           description: |-
-            When we reach for a target, we combine several kinds of information:
-            what we see, what our muscles and joints tell us about the arm,
-            what we have learned from past experience, and what we predict will
-            happen next. But these sources are not always equally reliable.
-            Vision can be delayed, and a source that usually helps can sometimes
-            become misleading. This research uses a musculoskeletal robot model
-            to study how a controller should decide which information to trust,
-            and by how much, when reaching under such uncertainty.<br><br>
-            Related preprints:<br>
-            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
-            Prediction-Error Correction Gain: Closed-Loop Evidence from a
-            Muscle-Driven Reaching Task</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
-            <strong>Reliability-weighted target-position estimation in a
-            musculoskeletal arm model: adaptive priors and learned source
-            weighting under violations of fixed-precision assumptions</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
-        - name: Climbing-fiber-like online readout adaptation
-          icon: hero/bolt
-          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
-          description: |-
-            Robots and human bodies can fail to move as expected when the same
-            motor command is used under new conditions, such as carrying a load
-            or being pushed by an external force. To keep moving well, the
-            controller needs a way to detect the error and gradually adjust the
-            movement. This research studies whether a continuous-time neural
-            controller can adapt online by changing only a small readout layer,
-            using an error signal inspired by cerebellar climbing fibers. In a
-            reaching task where an external force pushes the arm sideways, this
-            adaptation makes the movement straighter again. When the force is
-            removed, the model also shows a residual error in the opposite
-            direction, an after-effect that indicates the controller has learned
-            an internal model of the body and environment.<br><br>
+            Quiet standing depends on continuously deciding how much to trust
+            vestibular, proprioceptive, and visual information. When one
+            channel becomes unreliable, such as vision during a misleading
+            visual perturbation, the nervous system should reduce that
+            channel's influence without discarding the rest of the control
+            loop. This research studies sensory reweighting with a minimal
+            continuous-time active inference model of quiet standing. A
+            one-link inverted pendulum estimates posture and selects ankle
+            torque through the same free-energy objective, while context
+            changes selectively adjust the precision of each sensory prediction
+            error. The result is a compact account of how reliability changes
+            can propagate from perception to postural action.<br><br>
             Related preprint:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            Reweighting in Quiet Standing</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
         - name: Reach-and-hold posture stabilization
           icon: hero/hand-raised
           image_src: /jkoba-lab/media/selected-topics/myoArm.png
@@ -159,26 +136,49 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
-        - name: Precision-controlled sensory reweighting in quiet standing
-          icon: hero/scale
-          image: selected-topics/quiet-standing-sensory-reweighting.svg
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
           description: |-
-            Quiet standing depends on continuously deciding how much to trust
-            vestibular, proprioceptive, and visual information. When one
-            channel becomes unreliable, such as vision during a misleading
-            visual perturbation, the nervous system should reduce that
-            channel's influence without discarding the rest of the control
-            loop. This research studies sensory reweighting with a minimal
-            continuous-time active inference model of quiet standing. A
-            one-link inverted pendulum estimates posture and selects ankle
-            torque through the same free-energy objective, while context
-            changes selectively adjust the precision of each sensory prediction
-            error. The result is a compact account of how reliability changes
-            can propagate from perception to postural action.<br><br>
+            Robots and human bodies can fail to move as expected when the same
+            motor command is used under new conditions, such as carrying a load
+            or being pushed by an external force. To keep moving well, the
+            controller needs a way to detect the error and gradually adjust the
+            movement. This research studies whether a continuous-time neural
+            controller can adapt online by changing only a small readout layer,
+            using an error signal inspired by cerebellar climbing fibers. In a
+            reaching task where an external force pushes the arm sideways, this
+            adaptation makes the movement straighter again. When the force is
+            removed, the model also shows a residual error in the opposite
+            direction, an after-effect that indicates the controller has learned
+            an internal model of the body and environment.<br><br>
             Related preprint:<br>
-            <strong>Precision-Controlled Active Inference Accounts for Sensory
-            Reweighting in Quiet Standing</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+        - name: Adaptive sensory weighting in musculoskeletal reaching
+          icon: hero/adjustments-horizontal
+          image: selected-topics/adaptive-sensory-weighting.svg
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            When we reach for a target, we combine several kinds of information:
+            what we see, what our muscles and joints tell us about the arm,
+            what we have learned from past experience, and what we predict will
+            happen next. But these sources are not always equally reliable.
+            Vision can be delayed, and a source that usually helps can sometimes
+            become misleading. This research uses a musculoskeletal robot model
+            to study how a controller should decide which information to trust,
+            and by how much, when reaching under such uncertainty.<br><br>
+            Related preprints:<br>
+            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
+            Prediction-Error Correction Gain: Closed-Loop Evidence from a
+            Muscle-Driven Reaching Task</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
+            <strong>Reliability-weighted target-position estimation in a
+            musculoskeletal arm model: adaptive priors and learned source
+            weighting under violations of fixed-precision assumptions</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid
 
