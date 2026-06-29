@@ -159,6 +159,26 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Precision-controlled sensory reweighting in quiet standing
+          icon: hero/scale
+          image: selected-topics/quiet-standing-sensory-reweighting.svg
+          description: |-
+            Quiet standing depends on continuously deciding how much to trust
+            vestibular, proprioceptive, and visual information. When one
+            channel becomes unreliable, such as vision during a misleading
+            visual perturbation, the nervous system should reduce that
+            channel's influence without discarding the rest of the control
+            loop. This research studies sensory reweighting with a minimal
+            continuous-time active inference model of quiet standing. A
+            one-link inverted pendulum estimates posture and selects ankle
+            torque through the same free-energy objective, while context
+            changes selectively adjust the precision of each sensory prediction
+            error. The result is a compact account of how reliability changes
+            can propagate from perception to postural action.<br><br>
+            Related preprint:<br>
+            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            Reweighting in Quiet Standing</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
     design:
       layout: grid
 

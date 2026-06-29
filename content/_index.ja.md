@@ -27,6 +27,8 @@ sections:
     content:
       title: 最近のニュース
       text: |-
+        - **2026-06-29**: [Preprint posted: Precision-controlled active inference in quiet standing](/jkoba-lab/blog/2026-06-29-precision-controlled-active-inference-preprint/)  
+          DOI: [10.64898/2026.06.23.733972](https://doi.org/10.64898/2026.06.23.733972)
         - **2026-06-20**: [Preprint posted: Reach-and-hold at a musculoskeletal arm posture](/jkoba-lab/blog/2026-06-20-reach-hold-preprint/)  
           DOI: [10.64898/2026.06.15.732510](https://doi.org/10.64898/2026.06.15.732510)
         - **2026-06-15**: [Preprint posted: Climbing-fiber-like online readout adaptation](/jkoba-lab/blog/2026-06-15-climbing-fiber-preprint/)  
@@ -109,6 +111,15 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Precision-controlled sensory reweighting in quiet standing
+          icon: hero/scale
+          image: selected-topics/quiet-standing-sensory-reweighting.svg
+          description: |-
+            静かに立っているとき、私たちは前庭感覚、固有感覚、視覚を組み合わせながら姿勢を保っています。ただし、それぞれの情報をいつも同じ強さで信頼すればよいわけではありません。たとえば視覚が揺らされて信頼しにくい状況では、視覚の影響を弱めつつ、他の感覚と制御ループは使い続ける必要があります。この研究では、静止立位を 1 リンク倒立振子として表し、連続時間の能動的推論モデルによって感覚再重み付けを調べています。姿勢推定と足関節トルクの生成を同じ自由エネルギー目的関数で扱い、文脈に応じて各感覚予測誤差の precision を選択的に変えることで、信頼性の変化が知覚から姿勢制御へどのように伝わるかを説明します。<br><br>
+            関連プレプリント:<br>
+            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            Reweighting in Quiet Standing</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
     design:
       layout: grid
 

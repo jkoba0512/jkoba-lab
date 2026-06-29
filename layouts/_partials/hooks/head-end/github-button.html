@@ -21,7 +21,23 @@
       link.removeAttribute('rel')
     }
 
+    const forceEnglishPublications = (link) => {
+      const href = link.getAttribute('href')
+      if (!href) return
+      try {
+        const url = new URL(href, window.location.origin)
+        if (url.pathname === '/jkoba-lab/ja/publications/' || url.pathname === '/jkoba-lab/ja/publications') {
+          link.setAttribute('href', '/jkoba-lab/publications/')
+        }
+      } catch {
+        if (href === '/jkoba-lab/ja/publications/' || href === '/jkoba-lab/ja/publications') {
+          link.setAttribute('href', '/jkoba-lab/publications/')
+        }
+      }
+    }
+
     const fixPublicationsLink = (link) => {
+      forceEnglishPublications(link)
       if (link.closest('#nav-menu') && link.textContent.trim() === 'Publications') {
         link.setAttribute('href', '/jkoba-lab/publications/')
       }

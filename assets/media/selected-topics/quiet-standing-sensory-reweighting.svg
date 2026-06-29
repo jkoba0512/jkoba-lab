@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Precision-controlled sensory reweighting in quiet standing</title>
+  <desc id="desc">A quiet-standing inverted pendulum model with vestibular, proprioceptive, and visual precision channels.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#b45309"/>
+    </marker>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0f172a" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="360" rx="28" fill="url(#background)"/>
+  <rect x="24" y="24" width="912" height="312" rx="22" fill="#ffffff" opacity=".8"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="54" y="62" width="318" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g>
+    <rect x="86" y="250" width="254" height="18" rx="9" fill="#e2e8f0"/>
+    <path d="M214 249 L250 104" fill="none" stroke="#334155" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="250" cy="104" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/>
+    <path d="M216 249 C199 223 197 194 207 165" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-dasharray="8 9"/>
+    <path d="M248 250 C272 235 288 212 294 183" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M126 250 C144 210 168 180 207 165" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 7"/>
+    <circle cx="214" cy="250" r="12" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+    <path d="M255 137 C286 153 305 184 300 219" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <text x="113" y="92" fill="#0f172a" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="750">quiet standing</text>
+    <text x="114" y="120" fill="#64748b" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">one-link inverted pendulum</text>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="426" y="62" width="480" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="462" y="95" fill="#0f172a" font-size="22" font-weight="750">relative precision control</text>
+    <text x="462" y="121" fill="#64748b" font-size="15">sensory prediction errors are weighted by context</text>
+
+    <g>
+      <rect x="464" y="145" width="160" height="42" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+      <path d="M484 166 C493 154 514 154 526 166 C514 178 493 178 484 166Z" fill="none" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="505" cy="166" r="5" fill="#2563eb"/>
+      <text x="536" y="172" fill="#1d4ed8" font-size="16" font-weight="700">visual</text>
+      <rect x="650" y="157" width="178" height="18" rx="9" fill="#dbeafe"/>
+      <rect x="650" y="157" width="64" height="18" rx="9" fill="#2563eb"/>
+      <text x="840" y="172" fill="#1d4ed8" font-size="14" font-weight="700">low</text>
+    </g>
+
+    <g>
+      <rect x="464" y="201" width="160" height="42" rx="12" fill="#ecfdf5" stroke="#99f6e4"/>
+      <path d="M485 223 C494 207 513 207 521 223 C528 239 544 239 551 223" fill="none" stroke="#0f766e" stroke-width="3"/>
+      <text x="536" y="228" fill="#0f766e" font-size="16" font-weight="700">body</text>
+      <rect x="650" y="213" width="178" height="18" rx="9" fill="#ccfbf1"/>
+      <rect x="650" y="213" width="137" height="18" rx="9" fill="#0f766e"/>
+      <text x="840" y="228" fill="#0f766e" font-size="14" font-weight="700">high</text>
+    </g>
+
+    <g>
+      <rect x="464" y="257" width="160" height="42" rx="12" fill="#fffbeb" stroke="#fde68a"/>
+      <path d="M487 279 L502 268 L520 287 L544 264" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+      <text x="536" y="284" fill="#92400e" font-size="16" font-weight="700">vestibular</text>
+      <rect x="650" y="269" width="178" height="18" rx="9" fill="#fef3c7"/>
+      <rect x="650" y="269" width="154" height="18" rx="9" fill="#b45309"/>
+      <text x="840" y="284" fill="#92400e" font-size="14" font-weight="700">high</text>
+    </g>
+  </g>
+
+  <path d="M626 166 C642 158 650 154 664 148" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+  <path d="M626 222 C642 222 650 222 664 222" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+  <path d="M626 278 C642 284 650 288 664 294" fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+</svg>
