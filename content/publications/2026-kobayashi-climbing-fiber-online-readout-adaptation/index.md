@@ -19,7 +19,5 @@ tags:
   - Force-Field Adaptation
   - Computational Neuroscience
 featured: false
-links:
-  - type: source
-    url: https://doi.org/10.64898/2026.06.11.731593
+links: []
 ---

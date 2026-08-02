@@ -18,7 +18,5 @@ tags:
   - Impedance Control
   - MyoSuite
 featured: false
-links:
-  - type: source
-    url: https://doi.org/10.64898/2026.06.15.732510
+links: []
 ---

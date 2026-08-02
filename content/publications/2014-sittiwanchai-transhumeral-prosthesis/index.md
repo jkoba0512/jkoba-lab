@@ -20,7 +20,5 @@ tags:
   - 3D Printing
   - Elbow Joint
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/6911655
+links: []
 ---

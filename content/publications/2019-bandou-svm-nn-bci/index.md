@@ -25,7 +25,5 @@ tags:
 
 featured: true
 
-links:
-  - type: source
-    url: https://www.atlantis-press.com/journals/jrnal/125905740
+links: []
 ---

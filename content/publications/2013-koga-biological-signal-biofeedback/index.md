@@ -18,7 +18,5 @@ tags:
   - Biofeedback
   - Wearable
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/6704003
+links: []
 ---

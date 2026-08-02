@@ -18,7 +18,5 @@ tags:
   - Mechanical Resonance
   - Mechatronics
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/abstract/document/8971642
+links: []
 ---

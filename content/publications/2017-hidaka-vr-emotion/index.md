@@ -19,7 +19,5 @@ tags:
   - Affective Computing
   - HMD
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/8204459
+links: []
 ---

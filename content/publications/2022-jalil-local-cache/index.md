@@ -18,7 +18,5 @@ tags:
   - Data Transmission
   - Aggregated Robot Processing
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/10003765
+links: []
 ---

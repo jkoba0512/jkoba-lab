@@ -19,7 +19,5 @@ tags:
   - BCI
   - Imagination
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/7364652
+links: []
 ---

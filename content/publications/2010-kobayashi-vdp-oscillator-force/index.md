@@ -22,7 +22,5 @@ tags:
 
 featured: true
 
-links:
-  - type: source
-    url: https://link.springer.com/article/10.1007/s12555-010-0514-z
+links: []
 ---

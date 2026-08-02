@@ -18,7 +18,5 @@ tags:
   - State Observer
   - MyoSuite
 featured: false
-links:
-  - type: source
-    url: https://doi.org/10.64898/2026.06.03.729790
+links: []
 ---

@@ -21,7 +21,5 @@ tags:
   - モデル追従制御
   - 機台振動
 featured: false
-links:
-  - type: source
-    url: https://doi.org/10.1299/kikaic.68.1127
+links: []
 ---

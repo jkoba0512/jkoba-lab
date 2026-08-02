@@ -23,7 +23,5 @@ tags:
 
 featured: false
 
-links:
-  - type: source
-    url: https://link.springer.com/article/10.1007/s10015-015-0205-1
+links: []
 ---

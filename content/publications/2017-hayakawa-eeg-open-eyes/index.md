@@ -18,7 +18,5 @@ tags:
   - Neural Network
   - Open Eyes
 featured: false
-links:
-  - type: source
-    url: https://ieeexplore.ieee.org/document/8316542
+links: []
 ---
