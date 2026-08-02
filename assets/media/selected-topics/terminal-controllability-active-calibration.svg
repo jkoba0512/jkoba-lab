@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Task-compatible active calibration and terminal controllability</title>
+  <desc id="desc">A redundant planar arm probing in its null space while holding the task point fixed, next to the three layers of active calibration: identifiability creation, task-compatible exploration, and terminal controllability.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0f766e"/>
+    </marker>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0f172a" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="360" rx="28" fill="url(#background)"/>
+  <rect x="24" y="24" width="912" height="312" rx="22" fill="#ffffff" opacity=".8"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="54" y="62" width="318" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="86" y="95" fill="#0f172a" font-size="22" font-weight="750">active calibration</text>
+    <text x="86" y="119" fill="#64748b" font-size="14">redundant arm, unknown link lengths</text>
+
+    <rect x="86" y="140" width="104" height="26" rx="13" fill="#fffbeb" stroke="#fde68a"/>
+    <text x="138" y="158" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">unknown &#8467;</text>
+    <path d="M160 168 C170 178 176 182 184 188" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+
+    <rect x="76" y="258" width="76" height="14" rx="7" fill="#e2e8f0"/>
+
+    <path d="M104 258 L150 200 L218 178 L272 174 L322 152 L288 190 L238 220 L172 232 Z" fill="#0f766e" opacity=".10"/>
+    <path d="M104 258 L172 232 L238 220 L288 190 L322 152" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8"/>
+    <path d="M104 258 L150 200 L218 178 L272 174 L322 152" fill="none" stroke="#334155" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M192 194 C186 206 186 214 191 224" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+
+    <circle cx="150" cy="200" r="6" fill="#ffffff" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="218" cy="178" r="6" fill="#ffffff" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="272" cy="174" r="6" fill="#ffffff" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="104" cy="258" r="10" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+
+    <circle cx="322" cy="152" r="19" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="5 6"/>
+    <circle cx="322" cy="152" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+
+    <text x="86" y="292" fill="#64748b" font-size="13">null-space probing holds the task point fixed</text>
+  </g>
+
+  <path d="M380 180 C396 180 404 180 418 180" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="426" y="62" width="480" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="462" y="95" fill="#0f172a" font-size="22" font-weight="750">three layers of active calibration</text>
+    <text x="462" y="119" fill="#64748b" font-size="14">task failure is not predicted by parameter error (AUC = 0.511),</text>
+    <text x="462" y="139" fill="#64748b" font-size="14">but by short-horizon terminal rollout risk (AUC = 1.000)</text>
+
+    <g>
+      <rect x="464" y="168" width="296" height="38" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+      <circle cx="490" cy="187" r="13" fill="#2563eb"/>
+      <text x="490" y="192" fill="#ffffff" font-size="14" font-weight="750" text-anchor="middle">1</text>
+      <text x="514" y="192" fill="#1d4ed8" font-size="15" font-weight="700">identifiability creation</text>
+      <rect x="772" y="172" width="124" height="30" rx="15" fill="#dbeafe"/>
+      <text x="834" y="192" fill="#1d4ed8" font-size="13" font-weight="700" text-anchor="middle">achieved</text>
+    </g>
+
+    <g>
+      <rect x="464" y="212" width="296" height="38" rx="12" fill="#ecfdf5" stroke="#99f6e4"/>
+      <circle cx="490" cy="231" r="13" fill="#0f766e"/>
+      <text x="490" y="236" fill="#ffffff" font-size="14" font-weight="750" text-anchor="middle">2</text>
+      <text x="514" y="236" fill="#0f766e" font-size="15" font-weight="700">task-compatible exploration</text>
+      <rect x="772" y="216" width="124" height="30" rx="15" fill="#ccfbf1"/>
+      <text x="834" y="236" fill="#0f766e" font-size="13" font-weight="700" text-anchor="middle">achieved</text>
+    </g>
+
+    <g>
+      <rect x="464" y="256" width="296" height="38" rx="12" fill="#fffbeb" stroke="#fde68a"/>
+      <circle cx="490" cy="275" r="13" fill="#b45309"/>
+      <text x="490" y="280" fill="#ffffff" font-size="14" font-weight="750" text-anchor="middle">3</text>
+      <text x="514" y="280" fill="#92400e" font-size="15" font-weight="700">terminal controllability</text>
+      <rect x="772" y="260" width="124" height="30" rx="15" fill="#fef3c7"/>
+      <text x="834" y="280" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">44% task failure</text>
+    </g>
+  </g>
+</svg>

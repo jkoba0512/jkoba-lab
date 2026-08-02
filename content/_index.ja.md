@@ -27,6 +27,8 @@ sections:
     content:
       title: 最近のニュース
       text: |-
+        - **2026-08-02**: [Paper published: Terminal controllability in task-compatible active calibration](/jkoba-lab/blog/2026-08-02-terminal-controllability-ral/)  
+          DOI: [10.1109/LRA.2026.3719194](https://doi.org/10.1109/LRA.2026.3719194)
         - **2026-06-29**: [Preprint posted: Precision-controlled active inference in quiet standing](/jkoba-lab/blog/2026-06-29-precision-controlled-active-inference-preprint/)  
           DOI: [10.64898/2026.06.23.733972](https://doi.org/10.64898/2026.06.23.733972)
         - **2026-06-20**: [Preprint posted: Reach-and-hold at a musculoskeletal arm posture](/jkoba-lab/blog/2026-06-20-reach-hold-preprint/)  
@@ -74,6 +76,15 @@ sections:
       text: |-
         研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。
       items:
+        - name: Task-compatible active calibration and terminal controllability
+          icon: hero/viewfinder-circle
+          image: selected-topics/terminal-controllability-active-calibration.svg
+          description: |-
+            リンクの長さや手先の工具、運んでいる荷物が未知のロボットは、自ら動くことで自分の身体を測ることができます。ただし、その動きは自由ではありません。身体を測るための運動は、同時に、実行中のタスクを達成できる状態を保つものでなければならないからです。この研究では、冗長な平面アームが自己校正を行ってからリーチング課題に移るという二段階のプロトコルを用いて、このトレードオフを調べています。その結果、未知パラメータを同定可能にする探索運動だけでは十分ではないことが分かりました。校正自体は正確に終わっても、そこからでは決められた時間内にタスクを達成できない姿勢に、アームが取り残されることがあります。しかも、その失敗を予測したのはパラメータの推定誤差ではなく、校正を終えた時点の姿勢から動かしはじめて、決められたステップ数のうちに目標へ到達できるかどうか、という指標でした。つまり能動的キャリブレーションは、同定可能性をつくること、タスクと両立する形で探索すること、探索を終えた時点で、決められた時間内にタスクを達成できる状態を残しておくこと、という 3 つの層に分かれます。<br><br>
+            関連論文:<br>
+            <strong>When Identifiability Is Not Enough: Terminal Controllability
+            in Task-Compatible Active Calibration</strong><br>
+            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
         - name: Precision-controlled sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg

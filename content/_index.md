@@ -94,6 +94,29 @@ sections:
         Short introductions to some of our research directions, written for
         readers who want the main idea before going into the technical details.
       items:
+        - name: Task-compatible active calibration and terminal controllability
+          icon: hero/viewfinder-circle
+          image: selected-topics/terminal-controllability-active-calibration.svg
+          description: |-
+            A robot whose link lengths, tool, or payload are uncertain can move
+            in order to measure itself. But it cannot move freely: the same
+            motion has to keep the ongoing task within reach. This research
+            studies that trade-off in a redundant planar arm that must calibrate
+            itself and then complete a reaching task. Exploratory motion that
+            makes the unknown parameters identifiable turns out not to be
+            enough. The arm can finish calibration with accurate parameters and
+            still be left in a posture from which the task can no longer be
+            completed within the time available, and the failures are predicted
+            not by parameter error but by whether the goal is still reachable
+            within a fixed number of steps from the state where calibration
+            ends. Active calibration therefore separates into three layers:
+            creating identifiability, exploring in a task-compatible way, and
+            ending the exploration in a state from which the task is still
+            executable within the available horizon.<br><br>
+            Related publication:<br>
+            <strong>When Identifiability Is Not Enough: Terminal Controllability
+            in Task-Compatible Active Calibration</strong><br>
+            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
         - name: Precision-controlled sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg
