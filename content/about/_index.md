@@ -36,8 +36,8 @@ sections:
     content:
       title: '🔬 Research Themes'
       text: |-
-        See [Research](/projects/) for ongoing projects, [Publications](/publications/)
-        for the publication record, and [People](/people/) for lab members.
+        See [Research](/jkoba-lab/#section-focus-areas) for ongoing projects, [Publications](/jkoba-lab/publications/)
+        for the publication record, and [People](/jkoba-lab/people/) for lab members.
 
         - **Liquid Neural Networks (CfC / LNN)** — continuous-time neural networks
           as policy and dynamics models for robust robot control
