@@ -28,6 +28,7 @@ sections:
       title: 最近のニュース
       text: |-
         - **2026-08-02**: [Paper published: Terminal controllability in task-compatible active calibration](/jkoba-lab/blog/2026-08-02-terminal-controllability-ral/)  
+          *IEEE Robotics and Automation Letters, 11*(10), 11039–11045  
           DOI: [10.1109/LRA.2026.3719194](https://doi.org/10.1109/LRA.2026.3719194)
         - **2026-06-29**: [Preprint posted: Precision-controlled active inference in quiet standing](/jkoba-lab/blog/2026-06-29-precision-controlled-active-inference-preprint/)  
           DOI: [10.64898/2026.06.23.733972](https://doi.org/10.64898/2026.06.23.733972)
