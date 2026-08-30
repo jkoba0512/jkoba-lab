@@ -86,13 +86,13 @@ sections:
             <strong>When Identifiability Is Not Enough: Terminal Controllability
             in Task-Compatible Active Calibration</strong><br>
             DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
-        - name: Precision-controlled sensory reweighting in quiet standing
+        - name: Reliability-dependent sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg
           description: |-
-            静かに立っているとき、私たちは前庭感覚、固有感覚、視覚を組み合わせながら姿勢を保っています。ただし、それぞれの情報をいつも同じ強さで信頼すればよいわけではありません。たとえば視覚が揺らされて信頼しにくい状況では、視覚の影響を弱めつつ、他の感覚と制御ループは使い続ける必要があります。この研究では、静止立位を 1 リンク倒立振子として表し、連続時間の能動的推論モデルによって感覚再重み付けを調べています。姿勢推定と足関節トルクの生成を同じ自由エネルギー目的関数で扱い、文脈に応じて各感覚予測誤差の precision を選択的に変えることで、信頼性の変化が知覚から姿勢制御へどのように伝わるかを説明します。<br><br>
+            静かに立っているとき、私たちは前庭感覚、固有感覚、視覚を組み合わせながら姿勢を保っています。ただし、それぞれの情報をいつも同じ強さで信頼すればよいわけではありません。たとえば視覚が揺らされて信頼しにくい状況では、視覚の影響を弱めつつ、他の感覚と制御ループは使い続ける必要があります。この研究は、その調整を簡潔な数理モデルとして定式化します。静止立位を 1 リンク倒立振子として表し、姿勢推定と足関節トルクの生成を同じ自由エネルギー目的関数で扱ったうえで、感覚条件の違いは各チャネルの予測誤差に与える precision の相対値だけを通じてモデルに入り、身体力学と直立の目標は固定します。さらに不動点解析から、信念のバイアス、各感覚の状態更新への寄与、そして生じる姿勢のずれについて閉じた形の予測が得られます。閉ループシミュレーションはこれを裏づけ、信頼できないチャネルの precision を下げると外乱による姿勢のずれは約 82% 減少し、その減少は当該チャネルの信念更新への寄与の低下として現れました。precision を一律に下げても同じ効果は生じないため、感覚再重み付けは全体的な感度低下ではなく、相対的でチャネル選択的な調整だといえます。<br><br>
             関連プレプリント:<br>
-            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
         - name: Reach-and-hold posture stabilization

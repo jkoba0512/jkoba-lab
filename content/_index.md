@@ -117,7 +117,7 @@ sections:
             <strong>When Identifiability Is Not Enough: Terminal Controllability
             in Task-Compatible Active Calibration</strong><br>
             DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
-        - name: Precision-controlled sensory reweighting in quiet standing
+        - name: Reliability-dependent sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg
           description: |-
@@ -126,15 +126,23 @@ sections:
             channel becomes unreliable, such as vision during a misleading
             visual perturbation, the nervous system should reduce that
             channel's influence without discarding the rest of the control
-            loop. This research studies sensory reweighting with a minimal
-            continuous-time active inference model of quiet standing. A
-            one-link inverted pendulum estimates posture and selects ankle
-            torque through the same free-energy objective, while context
-            changes selectively adjust the precision of each sensory prediction
-            error. The result is a compact account of how reliability changes
-            can propagate from perception to postural action.<br><br>
+            loop. This research gives a compact mathematical account of that
+            adjustment. A one-link inverted pendulum estimates posture and
+            selects ankle torque through the same free-energy objective, and a
+            change in sensory conditions enters the model only through the
+            relative precision assigned to each channel's prediction error,
+            with the body dynamics and the upright goal held fixed. A
+            fixed-point analysis then yields closed-form predictions for the
+            belief bias, each channel's contribution to the state update, and
+            the resulting posture shift. Closed-loop simulations confirm them:
+            lowering an unreliable channel's precision cuts perturbation-driven
+            postural shifts by about 82%, and the reduction shows up in that
+            channel's contribution to belief updating. Reducing every precision
+            at once does not have the same effect, so reweighting is relative
+            and channel-selective rather than an overall damping of the
+            senses.<br><br>
             Related preprint:<br>
-            <strong>Precision-Controlled Active Inference Accounts for Sensory
+            <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
         - name: Reach-and-hold posture stabilization
