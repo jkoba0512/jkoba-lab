@@ -12,23 +12,33 @@ ja:
   locale: ja
   label: 日本語
   weight: 2
+  # URLs are relative and must NOT start with `/`. The theme renders every menu
+  # entry as `.URL | relLangURL`, which turns a root-relative `/people/` into
+  # `/ja/jkoba-lab/people/` (prefix before the base path) and rewrites an
+  # absolute URL to the Japanese path while also matching the theme's
+  # `^http` test, which adds `target="_blank"`. A `./`-style relative URL
+  # avoids both and yields `/jkoba-lab/ja/...`.
+  #
+  # `../publications/` is the one deliberate exception: there is no Japanese
+  # Publications page, and `relLangURL` resolves the `..` away, so this emits
+  # `/jkoba-lab/publications/` and sends Japanese readers to the English list.
   menus:
     main:
       - name: Home
-        url: https://jkoba0512.github.io/jkoba-lab/
+        url: ./
         weight: 10
       - name: Research
-        url: https://jkoba0512.github.io/jkoba-lab/#section-focus-areas
+        url: ./#section-focus-areas
         weight: 30
       - name: People
-        url: https://jkoba0512.github.io/jkoba-lab/people/
+        url: people/
         weight: 40
       - name: Publications
-        url: https://jkoba0512.github.io/jkoba-lab/publications/
+        url: ../publications/
         weight: 50
       - name: News
-        url: https://jkoba0512.github.io/jkoba-lab/#news
+        url: ./#news
         weight: 20
       - name: About
-        url: https://jkoba0512.github.io/jkoba-lab/about/
+        url: about/
         weight: 60
