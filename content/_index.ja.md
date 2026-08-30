@@ -22,26 +22,14 @@ sections:
       layout: split-left
       size: compact
 
-  - block: markdown
+  - block: news-crosslang
     id: news
     content:
       title: 最近のニュース
-      text: |-
-        - **2026-08-02**: [Paper published: Terminal controllability in task-compatible active calibration](/jkoba-lab/blog/2026-08-02-terminal-controllability-ral/)  
-          *IEEE Robotics and Automation Letters, 11*(10), 11039–11045  
-          DOI: [10.1109/LRA.2026.3719194](https://doi.org/10.1109/LRA.2026.3719194)
-        - **2026-06-29**: [Preprint posted: Precision-controlled active inference in quiet standing](/jkoba-lab/blog/2026-06-29-precision-controlled-active-inference-preprint/)  
-          DOI: [10.64898/2026.06.23.733972](https://doi.org/10.64898/2026.06.23.733972)
-        - **2026-06-20**: [Preprint posted: Reach-and-hold at a musculoskeletal arm posture](/jkoba-lab/blog/2026-06-20-reach-hold-preprint/)  
-          DOI: [10.64898/2026.06.15.732510](https://doi.org/10.64898/2026.06.15.732510)
-        - **2026-06-15**: [Preprint posted: Climbing-fiber-like online readout adaptation](/jkoba-lab/blog/2026-06-15-climbing-fiber-preprint/)  
-          DOI: [10.64898/2026.06.11.731593](https://doi.org/10.64898/2026.06.11.731593)
-        - **2026-06-11**: [Preprint posted: Reliability-weighted target-position estimation](/jkoba-lab/blog/2026-06-11-reliability-weighted-preprint/)  
-          DOI: [10.64898/2026.06.08.730995](https://doi.org/10.64898/2026.06.08.730995)
-        - **2026-06-08**: [Preprint posted: Predictive state observer gain adaptation](/jkoba-lab/blog/2026-06-08-predictive-state-observer-preprint/)  
-          DOI: [10.64898/2026.06.03.729790](https://doi.org/10.64898/2026.06.03.729790)
-    design:
-      columns: '1'
+      # 日本語版のブログ記事はないため、英語版の記事一覧をそのまま表示する。
+      source_language: en
+      page_type: blog
+      count: 7
 
   - block: focus-areas
     content:

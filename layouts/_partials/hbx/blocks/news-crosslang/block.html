@@ -1,0 +1,54 @@
+{{/* Project block: news list sourced from another language's site.
+
+     There are no translated blog posts, so on the Japanese pages the theme's
+     `collection` block renders nothing: it queries `site.Pages`, which Hugo
+     scopes to the current language. This block reads the posts from the source
+     language instead, so the Japanese home page tracks the English one
+     automatically rather than through a hand-maintained list. Items link to the
+     English post, which is where the hand-maintained list pointed too.
+
+     Content keys: title, source_language (default "en"), page_type
+     (default "blog"), count (default 5).
+*/}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+
+{{ $title := "" }}
+{{ with index $content "title" }}{{ $title = printf "%v" . | emojify | $page.RenderString }}{{ end }}
+
+{{ $lang := "en" }}
+{{ with index $content "source_language" }}{{ $lang = printf "%v" . }}{{ end }}
+
+{{ $page_type := "blog" }}
+{{ with index $content "page_type" }}{{ $page_type = printf "%v" . }}{{ end }}
+
+{{ $count := 5 }}
+{{ with index $content "count" }}{{ $count = int . }}{{ end }}
+
+{{ $source := false }}
+{{ range hugo.Sites }}
+  {{ if eq .Language.Lang $lang }}{{ $source = . }}{{ end }}
+{{ end }}
+{{ if not $source }}
+  {{ errorf "news-crosslang: no configured site for source_language %q" $lang }}
+{{ end }}
+
+{{ $items := first $count (where $source.RegularPages "Type" $page_type).ByDate.Reverse }}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+  {{ with $title }}
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  {{ if $items }}
+    {{ partial "views/news--start" . }}
+    {{ range $items }}
+      {{ partial "views/news" (dict "item" .) }}
+    {{ end }}
+    {{ partial "views/news--end" . }}
+  {{ end }}
+</div>
