@@ -10,12 +10,14 @@ banner:
   caption: ''
   image: ''
 
-# Disable per-publication detail pages — only the listing is rendered.
-# Each publication still appears in collections (home, /publications/) via `list: always`.
+# Publication detail pages are rendered so that the links author and tag
+# term pages generate from `.RelPermalink` resolve. The listing itself does not
+# link to them: `layouts/_partials/views/citation.html` renders the title as
+# plain text and surfaces DOI/Code instead.
 cascade:
   - target:
       kind: page
     build:
-      render: link
+      render: always
       list: always
 ---
