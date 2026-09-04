@@ -5,7 +5,7 @@ https://jkoba0512.github.io/jkoba-lab/.
 
 Kyushu Institute of Technology · Dept. of Intelligent and
 Control Systems · Associate Professor.
-Research: biologically-inspired robotics, liquid neural
+Research: biologically-inspired robotics, dynamical neural
 networks, active inference, musculoskeletal modeling.
 
 ## Built with

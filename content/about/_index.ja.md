@@ -20,7 +20,7 @@ sections:
     content:
       title: 'Mission'
       text: |-
-        機械的なロボットの動きと、生物に見られる滑らかで柔軟な振る舞いの差を埋めることを目指しています。Liquid Neural Networks、能動的推論、平衡点仮説、筋骨格モデルなどを組み合わせ、未知の環境でも破綻しにくい制御則を探ります。
+        機械的なロボットの動きと、生物に見られる滑らかで柔軟な振る舞いの差を埋めることを目指しています。神経集団ダイナミクス、能動的推論、平衡点仮説、筋骨格モデルなどを組み合わせ、未知の環境でも破綻しにくい制御則を探ります。
     design:
       columns: '1'
 
@@ -30,7 +30,7 @@ sections:
       text: |-
         研究テーマは [Research](/jkoba-lab/ja/#section-focus-areas)、論文一覧は [Publications](/jkoba-lab/publications/)、メンバーは [People](/jkoba-lab/ja/people/) をご覧ください。
 
-        - **Liquid Neural Networks (CfC / LNN)** — ロバストなロボット制御のための連続時間ニューラルネットワーク
+        - **ダイナミクスを持つニューラルネットワーク（LNN / LSTM / Mamba）** — ロバストなロボット制御のための、内部状態が時間発展するニューラルネットワーク
         - **Active Inference / Free Energy Principle** — 自由エネルギー原理に基づく目標指向的なロボットアーム制御
         - **Computational Neuroscience** — 人や生物の神経科学、生理学、解剖学に基づく制御システムの構築
     design:

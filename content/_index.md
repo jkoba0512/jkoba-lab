@@ -14,7 +14,7 @@ sections:
         Institute of Technology, we design controllers that let robots move
         with the adaptivity of living things. By drawing on principles from
         neural computation, the free energy principle, and human movement, we
-        turn models of biological motor control into continuous-time
+        turn models of biological motor control into adaptive neural
         controllers for robotic systems, from robot arms to humanoids and other
         embodied platforms, and let the robots, in turn, reveal where
         our understanding of the brain and body still falls short.
@@ -73,13 +73,15 @@ sections:
             principles for generating goal-directed behavior under uncertainty
             and serves as a theoretical foundation for adaptive robot control.
           image: research-themes/active-inference.png
-        - name: "Liquid Neural Networks (LNN)"
+        - name: "Dynamical Neural Networks"
           description: |-
             **The computational substrate.**
 
-            Liquid Neural Networks, including CfC (Closed-form Continuous-time
-            Networks), are neural network models for implementing
-            active-inference-based controllers as continuous-time dynamics. By
+            In the brain, movement arises from the evolving states of neural
+            populations. Following the same principle, we implement
+            active-inference-based controllers with neural networks whose
+            internal states evolve as dynamical systems — Liquid Neural
+            Networks (CfC), LSTMs, and state-space models such as Mamba. By
             flexibly changing their internal states in response to changes in
             the environment and the body, they support adaptive robot control.
           image: research-themes/liquid-neural-networks.png

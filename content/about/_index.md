@@ -26,7 +26,7 @@ sections:
       text: |-
         We are interested in closing the gap between mechanical robot motion and
         the smooth, flexible behavior seen in living systems. By combining ideas
-        from neuroscience — liquid neural networks, active inference, the
+        from neuroscience — neural population dynamics, active inference, the
         equilibrium-point hypothesis — with biomechanically faithful musculoskeletal
         models, we look for control laws that remain robust in unfamiliar environments.
     design:
@@ -39,8 +39,9 @@ sections:
         See [Research](/jkoba-lab/#section-focus-areas) for ongoing projects, [Publications](/jkoba-lab/publications/)
         for the publication record, and [People](/jkoba-lab/people/) for lab members.
 
-        - **Liquid Neural Networks (CfC / LNN)** — continuous-time neural networks
-          as policy and dynamics models for robust robot control
+        - **Dynamical Neural Networks (LNN / LSTM / Mamba)** — neural networks
+          with internal dynamics, from continuous-time LNNs (CfC) to LSTMs and
+          state-space models, as policy and dynamics models for robust robot control
         - **Active Inference / Free Energy Principle** — goal-directed control of
           robot arms grounded in the free-energy principle
         - **Computational Neuroscience** — building control systems grounded in

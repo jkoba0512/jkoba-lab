@@ -16,7 +16,7 @@ status:
   icon: ''
 role: Associate Professor
 bio: |
-  Working on biologically-inspired robotics — liquid neural networks, active
+  Working on biologically-inspired robotics — dynamical neural networks, active
   inference, and computational neuroscience for robotic systems, from robot
   arms to humanoids and other embodied platforms — at the
   Department of Intelligent and Control Systems, Kyushu Institute of Technology.
@@ -41,7 +41,7 @@ links:
 #    url: https://www.researchgate.net/profile/XXXX
 
 interests:
-  - Liquid Neural Networks (CfC / LNN)
+  - Dynamical Neural Networks (LNN / LSTM / Mamba)
   - Active Inference / Free Energy Principle
   - Computational Neuroscience
   - Robotic Systems Control

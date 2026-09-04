@@ -49,11 +49,11 @@ sections:
 
             自由エネルギー原理に基づき、知覚・予測・行動を統一的に説明する枠組みです。不確かさの下で目標指向的な行動を生成するための原理を与え、適応的なロボット制御の理論的基盤となります。
           image: research-themes/active-inference.png
-        - name: Liquid Neural Networks（LNN：液体ニューラルネットワーク）
+        - name: ダイナミクスを持つニューラルネットワーク
           description: |-
             **実装のための計算基盤。**
 
-            CfC（Closed-form Continuous-time Networks）をはじめとする Liquid Neural Networks は、能動的推論に基づく制御器を連続時間ダイナミクスとして実装するための神経ネットワークモデルです。環境や身体の変化に応じて状態を柔軟に変化させることで、適応的なロボット制御を実現します。
+            脳の運動は、神経集団の状態が時間発展するダイナミクスから生まれます。同じ原理にならい、内部状態が力学系として時間発展するニューラルネットワーク — Liquid Neural Networks（CfC）、LSTM、Mamba などの状態空間モデル — を、能動的推論に基づく制御器の実装基盤として用います。環境や身体の変化に応じて内部状態を柔軟に変化させることで、適応的なロボット制御を実現します。
           image: research-themes/liquid-neural-networks.png
     design:
       layout: cards
