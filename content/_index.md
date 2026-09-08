@@ -72,10 +72,13 @@ sections:
           description: |-
             **The principle for explaining movement.**
 
-            Based on the free energy principle, active inference provides a
-            unified framework for perception, prediction, and action. It offers
-            principles for generating goal-directed behavior under uncertainty
-            and serves as a theoretical foundation for adaptive robot control.
+            Based on the free energy principle, active inference gives a single
+            account of perception, prediction, and action, and of how
+            goal-directed behavior arises under uncertainty. We use it as the
+            theoretical foundation of adaptive robot control: the same
+            free-energy objective drives both state estimation and action, and
+            sensory reliability enters as precision, the weight placed on each
+            prediction error.
           image: research-themes/active-inference.png
         - name: "Dynamical Neural Networks"
           description: |-
