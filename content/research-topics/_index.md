@@ -25,21 +25,27 @@ sections:
           icon: hero/viewfinder-circle
           image: selected-topics/terminal-controllability-active-calibration.svg
           description: |-
-            A robot whose link lengths, tool, or payload are uncertain can move
-            in order to measure itself. But it cannot move freely: the same
-            motion has to keep the ongoing task within reach. This research
-            studies that trade-off in a redundant planar arm that must calibrate
-            itself and then complete a reaching task. Exploratory motion that
-            makes the unknown parameters identifiable turns out not to be
-            enough. The arm can finish calibration with accurate parameters and
-            still be left in a posture from which the task can no longer be
-            completed within the time available, and the failures are predicted
-            not by parameter error but by whether the goal is still reachable
-            within a fixed number of steps from the state where calibration
-            ends. Active calibration therefore separates into three layers:
-            creating identifiability, exploring in a task-compatible way, and
-            ending the exploration in a state from which the task is still
-            executable within the available horizon.<br><br>
+            A robot whose link lengths, tool, or payload are uncertain can move in
+            order to measure itself. But it cannot move freely: the same motion has
+            to keep the ongoing task feasible. This research studies that trade-off
+            in a redundant planar arm with unknown link lengths that must calibrate
+            itself and then complete a reaching task within a fixed time horizon. It
+            first develops a probing scheme that plans the exploratory motion
+            several steps ahead rather than one, so the arm can make its unknown
+            parameters identifiable while drifting little from the task; across 50
+            trials this eliminates every calibration failure. Yet many of those
+            trials still fail the task: the arm finishes calibration with accurate
+            parameters but in a posture from which the goal can no longer be reached
+            within the steps that remain. Neither parameter error nor standard
+            singularity measures predict which trials fail, whereas a short rollout
+            from the state where calibration ends separates them perfectly. This
+            terminal controllability is therefore a requirement of its own, and
+            managing it — keeping the posture well-conditioned during exploration
+            and allowing more time for the task — removes the remaining failures.
+            Active calibration thus has three distinct requirements: creating
+            identifiability, exploring in a task-compatible way, and ending the
+            exploration in a state from which the task is still executable. The
+            third can fail even when the first two are met.<br><br>
             Related publication:<br>
             <strong>When Identifiability Is Not Enough: Terminal Controllability
             in Task-Compatible Active Calibration</strong><br>
