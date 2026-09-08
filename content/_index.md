@@ -85,12 +85,14 @@ sections:
             **The computational substrate.**
 
             In the brain, movement arises from the evolving states of neural
-            populations. Following the same principle, we implement
-            active-inference-based controllers with neural networks whose
-            internal states evolve as dynamical systems — Liquid Neural
-            Networks (CfC), LSTMs, and state-space models such as Mamba. By
-            flexibly changing their internal states in response to changes in
-            the environment and the body, they support adaptive robot control.
+            populations. Following the same principle, we build controllers on
+            neural networks whose internal states evolve as dynamical systems —
+            Liquid Neural Networks (CfC), LSTMs, and state-space models such as
+            Mamba — as the substrate on which active inference is to run. Their
+            internal dynamics track the body and the environment as they
+            change, and adapting only a small readout with a cerebellum-like
+            error signal can be enough to correct the movement, which keeps
+            adaptation fast and cheap.
           image: research-themes/liquid-neural-networks.png
     design:
       layout: cards
