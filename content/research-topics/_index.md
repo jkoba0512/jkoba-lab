@@ -1,110 +1,25 @@
 ---
-title: ''
-summary: ''
-date: 2026-05-07
+title: 'Research Topics'
+date: 2026-09-08
 type: landing
 
 sections:
-  - block: hero
+  - block: markdown
     content:
-      eyebrow: Biologically-Inspired Robotics
-      title: 🤖 jkoba Lab
+      title: ''
       text: |-
-        We design controllers that let robots move with the adaptivity of
-        living things. The work runs both ways, from biology to robots and
-        back. Theories of biological motor control — active inference,
-        cerebellar learning, the equilibrium-point hypothesis — become
-        working controllers built on neural networks whose internal states
-        evolve as dynamical systems. We test them in closed loop, on
-        musculoskeletal models and robot arms first, and take what works to
-        humanoids and other embodied platforms. And when a controller
-        cannot hold a posture, adapt to an unexpected force, or decide which
-        sense to trust, that failure marks where what is understood about
-        the brain and body still falls short.
-      media:
-        src: research-hero.png
-        alt: Anime-style illustration of a humanoid robot with a visible brain and nervous system, studied by robotic arms in a neuroscience laboratory.
+        # Research Topics
+
+        Short introductions to our research directions, written for readers who
+        want the main idea before going into the technical details. Each topic
+        names the related publication or preprint.
     design:
-      layout: split-left
-      size: compact
-
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      page_type: blog
-      count: 3
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      offset: 0
-      order: desc
-    design:
-      view: news
-
-  - block: focus-areas
-    content:
-      title: Research Theme
-      subtitle: |-
-        We integrate the mechanisms that support biological movement, the
-        theories that explain their underlying principles, and the computational
-        models that implement them to realize biologically-inspired robot
-        control that can adapt to changes in the environment and the body.
-      items:
-        - name: Computational Neuroscience
-          description: |-
-            **The biological grounding.**
-
-            We aim to understand the mechanisms of human and animal motor
-            control through theory and computational models. Biological insight
-            defines the goals and constraints that robot control should satisfy.
-            By testing these theories in closed loop, on musculoskeletal models
-            and robots, we also reveal open questions in biological motor
-            control.
-          image: research-themes/computational-neuroscience.png
-        - name: Active Inference
-          description: |-
-            **The principle for explaining movement.**
-
-            Based on the free energy principle, active inference gives a single
-            account of perception, prediction, and action, and of how
-            goal-directed behavior arises under uncertainty. We use it as the
-            theoretical foundation of adaptive robot control: the same
-            free-energy objective drives both state estimation and action, and
-            the reliability of each sense is encoded as precision, the weight
-            given to its prediction errors.
-          image: research-themes/active-inference.png
-        - name: "Dynamical Neural Networks"
-          description: |-
-            **The computational substrate.**
-
-            In the brain, movement arises from the evolving states of neural
-            populations. Following the same principle, we build controllers on
-            neural networks whose internal states evolve as dynamical systems —
-            Liquid Neural Networks (CfC), LSTMs, and state-space models such as
-            Mamba — as the substrate on which active inference is to run. Their
-            internal dynamics track the body and the environment as they
-            change, and adapting only a small readout with a cerebellum-like
-            error signal can be enough to correct the movement, which keeps
-            adaptation fast and cheap.
-          image: research-themes/liquid-neural-networks.png
-    design:
-      layout: cards
+      columns: '1'
 
   - block: features
-    id: selected-topics
+    id: topics
     content:
-      title: Selected Research Topics
-      text: |-
-        Short introductions to some of our research directions, written for
-        readers who want the main idea before going into the technical
-        details. <a href="/jkoba-lab/research-topics/" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">See all research topics &rarr;</a>
+      title: ''
       items:
         - name: Task-compatible active calibration and terminal controllability
           icon: hero/viewfinder-circle
@@ -179,23 +94,49 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          description: |-
+            Robots and human bodies can fail to move as expected when the same
+            motor command is used under new conditions, such as carrying a load
+            or being pushed by an external force. To keep moving well, the
+            controller needs a way to detect the error and gradually adjust the
+            movement. This research studies whether a continuous-time neural
+            controller can adapt online by changing only a small readout layer,
+            using an error signal inspired by cerebellar climbing fibers. In a
+            reaching task where an external force pushes the arm sideways, this
+            adaptation makes the movement straighter again. When the force is
+            removed, the model also shows a residual error in the opposite
+            direction, an after-effect that indicates the controller has learned
+            an internal model of the body and environment.<br><br>
+            Related preprint:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+        - name: Adaptive sensory weighting in musculoskeletal reaching
+          icon: hero/adjustments-horizontal
+          image: selected-topics/adaptive-sensory-weighting.svg
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            When we reach for a target, we combine several kinds of information:
+            what we see, what our muscles and joints tell us about the arm,
+            what we have learned from past experience, and what we predict will
+            happen next. But these sources are not always equally reliable.
+            Vision can be delayed, and a source that usually helps can sometimes
+            become misleading. This research uses a musculoskeletal robot model
+            to study how a controller should decide which information to trust,
+            and by how much, when reaching under such uncertainty.<br><br>
+            Related preprints:<br>
+            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
+            Prediction-Error Correction Gain: Closed-Loop Evidence from a
+            Muscle-Driven Reaching Task</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
+            <strong>Reliability-weighted target-position estimation in a
+            musculoskeletal arm model: adaptive priors and learned source
+            weighting under violations of fixed-precision assumptions</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid
-
-  - block: collection
-    id: papers
-    content:
-      title: Recent Publications
-      text: ''
-      count: 5
-      archive:
-        enable: true
-        text: See all publications
-        link: publications/
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
 ---

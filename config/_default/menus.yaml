@@ -7,6 +7,9 @@ main:
   - name: Research
     url: /#section-focus-areas
     weight: 30
+  - name: Research Topics
+    url: /research-topics/
+    weight: 35
   - name: People
     url: /people/
     weight: 40

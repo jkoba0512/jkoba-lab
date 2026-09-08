@@ -1,69 +1,23 @@
 ---
-title: ''
-summary: ''
-date: 2026-05-07
+title: 'Research Topics'
+date: 2026-09-08
 type: landing
 
 sections:
-  - block: hero
+  - block: markdown
     content:
-      eyebrow: 生物に着想を得たロボティクス
-      title: 🤖 jkoba Lab
+      title: ''
       text: |-
-        生物のように柔軟かつ適応的に動くロボットを実現する制御器を設計しています。研究は、生物からロボットへ、そしてロボットから生物へと往復します。
+        # Research Topics
 
-        能動的推論、小脳の誤差学習、平衡点仮説といった生物の運動制御の理論を、内部状態が力学系として時間発展するニューラルネットワークによる制御器として実装します。まず筋骨格モデルとロボットアームの上で閉ループで動かして検証し、そこで通用したものをヒューマノイドなどの身体をもつシステムへ広げていきます。
-
-        そして、制御器がつまずくところ——姿勢を保てない、予期しない外力に適応できない、どの感覚を信頼すべきか決められない——は、脳と身体についての理解がまだ届いていない場所でもあります。
-      media:
-        src: research-hero.png
-        alt: 神経系が見えるヒューマノイドロボットと、神経科学研究室でそれを調べるロボットアームのイラスト。
+        研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。
     design:
-      layout: split-left
-      size: compact
-
-  - block: news-crosslang
-    id: news
-    content:
-      title: 最近のニュース
-      # 日本語版のブログ記事はないため、英語版の記事一覧をそのまま表示する。
-      source_language: en
-      page_type: blog
-      count: 7
-
-  - block: focus-areas
-    content:
-      title: 研究テーマ
-      subtitle: |-
-        生物の運動を支える仕組み、その原理を説明する理論、そしてそれを実装する計算モデルを統合し、環境や身体の変化に適応できる生物規範型ロボット制御の実現を目指しています。
-      items:
-        - name: 計算論的神経科学
-          description: |-
-            **生物学的な基盤。**
-
-            人や動物の運動制御の仕組みを理論と計算モデルによって理解することを目指します。生体の知見は、ロボット制御が満たすべき目標や制約を与えます。また、筋骨格モデルやロボットの上でこれらの理論を閉ループで検証することで、生物の運動制御に残る未解明の問いを明らかにします。
-          image: research-themes/computational-neuroscience.png
-        - name: 能動的推論（Active Inference）
-          description: |-
-            **運動を説明する原理。**
-
-            自由エネルギー原理に基づき、知覚・予測・行動と、不確かさの下で目標指向的な行動が生まれる仕組みを、一つの枠組みで説明する理論です。私たちはこれを適応的なロボット制御の理論的基盤として用います。同じ自由エネルギー目的関数が状態推定と行動生成の両方を駆動し、各感覚の信頼性は、その予測誤差にかける重み（precision）として表されます。
-          image: research-themes/active-inference.png
-        - name: ダイナミクスを持つニューラルネットワーク
-          description: |-
-            **実装のための計算基盤。**
-
-            脳の運動は、神経集団の状態が時間発展するダイナミクスから生まれます。同じ原理にならい、内部状態が力学系として時間発展するニューラルネットワーク — Liquid Neural Networks（CfC）、LSTM、Mamba などの状態空間モデル — の上に制御器を構築し、能動的推論を載せる基盤とします。その内部ダイナミクスが身体と環境の変化を追い、小脳に似た誤差信号で小さな読み出し層だけを適応させれば運動を修正できる場合があり、適応を速く安価に保てます。
-          image: research-themes/liquid-neural-networks.png
-    design:
-      layout: cards
+      columns: '1'
 
   - block: features
-    id: selected-topics
+    id: topics
     content:
-      title: Selected Research Topics
-      text: |-
-        研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。<a href="/jkoba-lab/ja/research-topics/" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">すべての研究トピックを見る &rarr;</a>
+      title: ''
       items:
         - name: Task-compatible active calibration and terminal controllability
           icon: hero/viewfinder-circle
@@ -95,17 +49,31 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          description: |-
+            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。それでもうまく動くためには、ずれを見つけて動かし方を少しずつ直す仕組みが必要です。この研究では、小脳の登上線維が運ぶ誤差信号のような情報を手がかりにして、連続時間ニューラルコントローラの一部だけをオンラインで調整する方法を調べています。腕の動きを横から押し曲げるような外力を加えた課題では、この調整によって動きが再びまっすぐに近づきます。また、その外力を取り除いた後に逆向きのずれが現れる「残効」も再現されます。これは、身体の動かし方を内部で学習したことを示す重要な特徴です。<br><br>
+            関連プレプリント:<br>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
+        - name: Adaptive sensory weighting in musculoskeletal reaching
+          icon: hero/adjustments-horizontal
+          image: selected-topics/adaptive-sensory-weighting.svg
+          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          description: |-
+            目標に向かって手を伸ばすとき、私たちは目で見た位置、筋肉や関節から感じる腕の位置、これまでの経験、そして「こう動くはずだ」という予測を組み合わせています。ただし、いつもすべての情報が正しいとは限りません。視覚が遅れたり、あてにしていた情報が間違っていたりすることもあります。この研究では、そのような状況で、どの情報をどのくらい信頼すればよいかをロボットの筋骨格モデルを使って調べています。<br><br>
+            関連プレプリント:<br>
+            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
+            Prediction-Error Correction Gain: Closed-Loop Evidence from a
+            Muscle-Driven Reaching Task</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
+            <strong>Reliability-weighted target-position estimation in a
+            musculoskeletal arm model: adaptive priors and learned source
+            weighting under violations of fixed-precision assumptions</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid
-
-  - block: markdown
-    id: papers
-    content:
-      title: 最近の論文
-      text: |-
-        Publications は英語版のページで管理しています。日本語版トップからも、現在の Publications 一覧をそのまま確認できます。
-
-        [See all publications](/jkoba-lab/publications/)
-    design:
-      columns: '1'
 ---
