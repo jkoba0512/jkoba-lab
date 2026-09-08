@@ -64,8 +64,9 @@ sections:
             We aim to understand the mechanisms of human and animal motor
             control through theory and computational models. Biological insight
             defines the goals and constraints that robot control should satisfy.
-            By testing these theories on robots, we also reveal open questions
-            in biological motor control.
+            By testing these theories in closed loop, on musculoskeletal models
+            and robots, we also reveal open questions in biological motor
+            control.
           image: research-themes/computational-neuroscience.png
         - name: Active Inference
           description: |-
