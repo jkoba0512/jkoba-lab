@@ -77,8 +77,8 @@ sections:
             goal-directed behavior arises under uncertainty. We use it as the
             theoretical foundation of adaptive robot control: the same
             free-energy objective drives both state estimation and action, and
-            sensory reliability enters as precision, the weight placed on each
-            prediction error.
+            the reliability of each sense is encoded as precision, the weight
+            given to its prediction errors.
           image: research-themes/active-inference.png
         - name: "Dynamical Neural Networks"
           description: |-
