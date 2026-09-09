@@ -5,6 +5,7 @@ type: landing
 
 sections:
   - block: markdown
+    id: intro
     content:
       title: ''
       text: |-
@@ -22,6 +23,7 @@ sections:
         - Faculty
 
   - block: markdown
+    id: alumni
     content:
       title: '🎓 Alumni'
       text: |-

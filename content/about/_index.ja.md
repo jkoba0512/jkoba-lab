@@ -5,6 +5,7 @@ type: landing
 
 sections:
   - block: markdown
+    id: intro
     content:
       title: ''
       text: |-
@@ -17,6 +18,7 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: mission
     content:
       title: 'Mission'
       text: |-
@@ -25,6 +27,7 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: research-themes
     content:
       title: 'Research Themes'
       text: |-

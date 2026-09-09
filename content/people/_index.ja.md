@@ -5,6 +5,7 @@ type: landing
 
 sections:
   - block: markdown
+    id: intro
     content:
       title: ''
       text: |-
@@ -22,10 +23,11 @@ sections:
         - Faculty
 
   - block: markdown
+    id: alumni
     content:
       title: 'Alumni'
       text: |-
-        過去のメンバーと卒業生は [Alumni](alumni/) ページに掲載しています。
+        過去のメンバーと卒業生は [Alumni](/jkoba-lab/people/alumni/) ページに掲載しています。
     design:
       columns: '1'
 ---
