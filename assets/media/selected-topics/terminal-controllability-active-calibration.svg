@@ -84,7 +84,7 @@
       <text x="490" y="280" fill="#ffffff" font-size="14" font-weight="750" text-anchor="middle">3</text>
       <text x="514" y="280" fill="#92400e" font-size="15" font-weight="700">terminal controllability</text>
       <rect x="772" y="260" width="124" height="30" rx="15" fill="#fef3c7"/>
-      <text x="834" y="280" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">44% task failure</text>
+      <text x="834" y="280" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">task still fails</text>
     </g>
   </g>
 </svg>
