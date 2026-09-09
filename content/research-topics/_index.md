@@ -63,21 +63,23 @@ sections:
             mathematical account of how sensory reliability travels from state
             estimation to postural action has been missing. This research provides
             one. A one-link inverted pendulum estimates its posture and selects
-            ankle torque through a single free-energy objective, and a change in
-            sensory conditions enters the model only through precision — the weight
-            given to each channel's prediction error — while the body dynamics and
-            the upright goal are held fixed. A fixed-point analysis then yields
-            closed-form predictions for the belief bias a perturbation induces, each
-            channel's contribution to the state update, and the resulting posture
-            shift. Closed-loop simulations confirm them: lowering an unreliable
-            channel's precision cuts perturbation-driven postural shifts by about
-            82%, as the analysis predicts, and the reduction appears in that
-            channel's contribution to belief updating, so the reweighting happens in
-            belief updating rather than in the choice of action. A graded mapping
-            from reliability to precision controls a channel's influence smoothly,
-            whereas reducing every precision at once does not have the same effect:
-            reweighting is relative and channel-selective rather than an overall
-            damping of the senses.<br><br>
+            ankle torque through a single free-energy objective, weighting each
+            channel's prediction error by a precision that expresses how far that
+            channel is trusted. The perturbation itself is applied as a misleading
+            signal in one channel; the sensory context — that this channel is now
+            unreliable — enters the model only through that channel's precision,
+            while the body dynamics and the upright goal are held fixed. A fixed-
+            point analysis then yields closed-form predictions for the belief bias a
+            perturbation induces, each channel's contribution to the state update,
+            and the resulting posture shift. Closed-loop simulations confirm them:
+            lowering an unreliable channel's precision cuts perturbation-driven
+            postural shifts by about 82%, as the analysis predicts, and the
+            reduction appears in that channel's contribution to belief updating, so
+            the reweighting happens in belief updating rather than in the choice of
+            action. A graded mapping from reliability to precision controls a
+            channel's influence smoothly, whereas reducing every precision at once
+            does not have the same effect: reweighting is relative and channel-
+            selective rather than an overall damping of the senses.<br><br>
             Related preprint:<br>
             <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
