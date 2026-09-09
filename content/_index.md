@@ -140,25 +140,29 @@ sections:
           image: selected-topics/quiet-standing-sensory-reweighting.svg
           description: |-
             Quiet standing depends on continuously deciding how much to trust
-            vestibular, proprioceptive, and visual information. When one
-            channel becomes unreliable, such as vision during a misleading
-            visual perturbation, the nervous system should reduce that
-            channel's influence without discarding the rest of the control
-            loop. This research gives a compact mathematical account of that
-            adjustment. A one-link inverted pendulum estimates posture and
-            selects ankle torque through the same free-energy objective, and a
-            change in sensory conditions enters the model only through the
-            relative precision assigned to each channel's prediction error,
-            with the body dynamics and the upright goal held fixed. A
-            fixed-point analysis then yields closed-form predictions for the
-            belief bias, each channel's contribution to the state update, and
-            the resulting posture shift. Closed-loop simulations confirm them:
-            lowering an unreliable channel's precision cuts perturbation-driven
-            postural shifts by about 82%, and the reduction shows up in that
-            channel's contribution to belief updating. Reducing every precision
-            at once does not have the same effect, so reweighting is relative
-            and channel-selective rather than an overall damping of the
-            senses.<br><br>
+            vestibular, proprioceptive, and visual information. When one channel
+            becomes unreliable, such as vision during a misleading visual
+            perturbation, the nervous system should reduce that channel's influence
+            without discarding the rest of the control loop. Posturography
+            experiments have long characterized this reweighting, but a compact
+            mathematical account of how sensory reliability travels from state
+            estimation to postural action has been missing. This research provides
+            one. A one-link inverted pendulum estimates its posture and selects
+            ankle torque through a single free-energy objective, and a change in
+            sensory conditions enters the model only through precision — the weight
+            given to each channel's prediction error — while the body dynamics and
+            the upright goal are held fixed. A fixed-point analysis then yields
+            closed-form predictions for the belief bias a perturbation induces, each
+            channel's contribution to the state update, and the resulting posture
+            shift. Closed-loop simulations confirm them: lowering an unreliable
+            channel's precision cuts perturbation-driven postural shifts by about
+            82%, as the analysis predicts, and the reduction appears in that
+            channel's contribution to belief updating, so the reweighting happens in
+            belief updating rather than in the choice of action. A graded mapping
+            from reliability to precision controls a channel's influence smoothly,
+            whereas reducing every precision at once does not have the same effect:
+            reweighting is relative and channel-selective rather than an overall
+            damping of the senses.<br><br>
             Related preprint:<br>
             <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
