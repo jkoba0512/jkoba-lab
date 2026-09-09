@@ -114,7 +114,7 @@ sections:
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
         - name: Climbing-fiber-like online readout adaptation
           icon: hero/bolt
-          image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
+          image: selected-topics/climbing-fiber-readout-adaptation.svg
           description: |-
             Robots and human bodies can fail to move as expected when the same motor
             command is used under new conditions, such as carrying a load or being

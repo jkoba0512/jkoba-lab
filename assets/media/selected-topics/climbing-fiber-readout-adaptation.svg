@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Climbing-fiber-like online readout adaptation</title>
+  <desc id="desc">Left: a frozen continuous-time network feeds a small readout that drives the arm; a climbing-fiber-like error signal updates only the readout. Right: three reaches under a sideways force field: pushed off course when the field comes on, straight again after adaptation, and bowed the other way as an after-effect when the field is removed.</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#b45309"/>
+    </marker>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0f172a" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="360" rx="28" fill="url(#background)"/>
+  <rect x="24" y="24" width="912" height="312" rx="22" fill="#ffffff" opacity=".8"/>
+
+  <!-- Left card: the controller -->
+  <g filter="url(#soft-shadow)">
+    <rect x="54" y="62" width="318" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="82" y="95" fill="#0f172a" font-size="21" font-weight="750">core frozen, readout adapts</text>
+    <text x="82" y="119" fill="#64748b" font-size="14">only the small readout learns online</text>
+
+    <!-- goal input -->
+    <text x="70" y="184" fill="#64748b" font-size="12">goal</text>
+    <path d="M70 194 L98 194" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-slate)"/>
+
+    <!-- frozen CfC core -->
+    <rect x="104" y="150" width="96" height="88" rx="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+    <g fill="none" stroke="#94a3b8" stroke-width="1.5">
+      <path d="M124 178 L152 168 M124 178 L152 196 M152 168 L180 182 M152 196 L180 182 M152 168 L152 196 M180 182 C186 170 172 160 152 168"/>
+    </g>
+    <circle cx="124" cy="178" r="5" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+    <circle cx="152" cy="168" r="5" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+    <circle cx="152" cy="196" r="5" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+    <circle cx="180" cy="182" r="5" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+    <!-- lock -->
+    <rect x="145" y="214" width="14" height="10" rx="2" fill="#64748b"/>
+    <path d="M148 214 V210 A4 4 0 0 1 156 210 V214" fill="none" stroke="#64748b" stroke-width="2"/>
+    <text x="152" y="144" fill="#475569" font-size="11" font-weight="700" text-anchor="middle">CfC core</text>
+
+    <!-- core -> readout -->
+    <path d="M200 194 L218 194" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-slate)"/>
+
+    <!-- adaptive readout -->
+    <rect x="224" y="170" width="70" height="48" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="2.5"/>
+    <text x="259" y="190" fill="#0f766e" font-size="12" font-weight="750" text-anchor="middle">readout</text>
+    <text x="259" y="206" fill="#0f766e" font-size="11" text-anchor="middle">adapts</text>
+
+    <!-- readout -> arm -->
+    <path d="M294 194 L310 194" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-slate)"/>
+
+    <!-- two-link arm -->
+    <path d="M320 222 L334 190 L356 176" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="320" cy="222" r="5" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+    <circle cx="356" cy="176" r="6" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+
+    <!-- climbing-fiber-like error: from the arm back to the readout only -->
+    <path d="M348 190 C346 240 300 256 262 226" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arrow-red)"/>
+    <text x="82" y="266" fill="#dc2626" font-size="13" font-weight="750">climbing-fiber-like error</text>
+    <text x="82" y="284" fill="#64748b" font-size="12">updates the readout; the core stays frozen</text>
+  </g>
+
+  <!-- Right card: the behaviour -->
+  <g filter="url(#soft-shadow)">
+    <rect x="426" y="62" width="480" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="454" y="95" fill="#0f172a" font-size="22" font-weight="750">force-field adaptation and after-effect</text>
+    <text x="454" y="119" fill="#64748b" font-size="14">reaches from the start (bottom) to the target (top)</text>
+
+    <!-- panel 1: field on, first reaches -->
+    <g>
+      <circle cx="510" cy="248" r="5" fill="#334155"/>
+      <circle cx="510" cy="150" r="7" fill="none" stroke="#334155" stroke-width="2.5"/>
+      <path d="M510 248 C552 224 552 176 510 150" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M466 199 L486 199" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+      <text x="476" y="190" fill="#92400e" font-size="11" font-weight="700" text-anchor="middle">force</text>
+      <text x="510" y="272" fill="#92400e" font-size="13" font-weight="750" text-anchor="middle">field on: pushed</text>
+    </g>
+
+    <!-- panel 2: after adaptation -->
+    <g>
+      <circle cx="666" cy="248" r="5" fill="#334155"/>
+      <circle cx="666" cy="150" r="7" fill="none" stroke="#334155" stroke-width="2.5"/>
+      <path d="M666 248 L666 150" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M622 199 L642 199" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+      <text x="632" y="190" fill="#92400e" font-size="11" font-weight="700" text-anchor="middle">force</text>
+      <text x="666" y="272" fill="#0f766e" font-size="13" font-weight="750" text-anchor="middle">after adaptation</text>
+    </g>
+
+    <!-- panel 3: field removed, after-effect -->
+    <g>
+      <circle cx="822" cy="248" r="5" fill="#334155"/>
+      <circle cx="822" cy="150" r="7" fill="none" stroke="#334155" stroke-width="2.5"/>
+      <path d="M822 248 C780 224 780 176 822 150" fill="none" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 6"/>
+      <text x="822" y="272" fill="#1d4ed8" font-size="13" font-weight="750" text-anchor="middle">field off: after-effect</text>
+    </g>
+
+    <text x="454" y="291" fill="#64748b" font-size="12">after-effect = internal model learned; a feedback-only controller shows none</text>
+  </g>
+</svg>
