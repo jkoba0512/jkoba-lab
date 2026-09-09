@@ -116,18 +116,25 @@ sections:
           icon: hero/bolt
           image_src: /jkoba-lab/media/selected-topics/climbing-fiber-readout-adaptation.png
           description: |-
-            Robots and human bodies can fail to move as expected when the same
-            motor command is used under new conditions, such as carrying a load
-            or being pushed by an external force. To keep moving well, the
-            controller needs a way to detect the error and gradually adjust the
-            movement. This research studies whether a continuous-time neural
-            controller can adapt online by changing only a small readout layer,
-            using an error signal inspired by cerebellar climbing fibers. In a
-            reaching task where an external force pushes the arm sideways, this
-            adaptation makes the movement straighter again. When the force is
-            removed, the model also shows a residual error in the opposite
-            direction, an after-effect that indicates the controller has learned
-            an internal model of the body and environment.<br><br>
+            Robots and human bodies can fail to move as expected when the same motor
+            command is used under new conditions, such as carrying a load or being
+            pushed by an external force. Controllers built on liquid neural networks
+            and related continuous-time models (CfC) are usually trained offline and
+            have no built-in way to recalibrate once the body or the environment
+            changes, and retraining the whole network online is costly. This
+            research asks whether a much cheaper route works: freeze the trained
+            network and adapt only a small linear readout, driven by an error signal
+            inspired by the cerebellum's climbing fibers. In a simulated two-link
+            reaching task where a force field pushes the arm sideways, this readout-
+            only adaptation re-straightens the reach. When the field is removed, the
+            arm overshoots in the opposite direction — a mirror-image after-effect
+            that is the behavioral signature of internal-model learning — which a
+            feedback-only controller does not produce. The result carries over to a
+            sparse, neuron-like NCP wiring when the network's internal state is used
+            as the readout basis, holds across force-field strengths and directions,
+            and, within the range tested, never required touching the frozen core.
+            Adapting only the readout thus offers a biologically inspired, low-cost
+            adaptation layer for offline-trained continuous-time controllers.<br><br>
             Related preprint:<br>
             <strong>Climbing-fiber-like online readout adaptation in frozen
             continuous-time networks reproduces force-field adaptation and
