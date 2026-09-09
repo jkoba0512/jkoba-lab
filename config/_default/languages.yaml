@@ -27,9 +27,6 @@ ja:
       - name: Home
         url: ./
         weight: 10
-      - name: Research
-        url: ./#section-focus-areas
-        weight: 30
       - name: Research Topics
         url: research-topics/
         weight: 35
