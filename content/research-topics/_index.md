@@ -86,10 +86,7 @@ sections:
             DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
         - name: Reach-and-hold posture stabilization
           icon: hero/hand-raised
-          image_src: /jkoba-lab/media/selected-topics/myoArm.png
-          image_fit: contain
-          image_size: compact
-          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
+          image: selected-topics/reach-and-hold-posture-stabilization.svg
           description: |-
             Holding an arm still is not as simple as sending a fixed command. In a
             musculoskeletal arm with more muscles than the task needs, gravity,
@@ -143,7 +140,6 @@ sections:
         - name: Adaptive sensory weighting in musculoskeletal reaching
           icon: hero/adjustments-horizontal
           image: selected-topics/adaptive-sensory-weighting.svg
-          image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
           description: |-
             When we reach for a target, we combine several kinds of information:
             what we see, what our muscles and joints tell us about the arm, what we

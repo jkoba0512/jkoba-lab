@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Reach-and-hold posture stabilization</title>
+  <desc id="desc">Left: a two-link arm holding its hand at a target against gravity drifts away, like a ball balanced on top of a hill. Right: five fixed, non-learning controllers, from a posture reflex to exact gravity balancing at the goal, and none produces a stable hold; the problem is stabilizing the equilibrium, not placing it.</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#dc2626"/>
+    </marker>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0f172a" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="360" rx="28" fill="url(#background)"/>
+  <rect x="24" y="24" width="912" height="312" rx="22" fill="#ffffff" opacity=".8"/>
+
+  <!-- Left card: the task -->
+  <g filter="url(#soft-shadow)">
+    <rect x="54" y="62" width="318" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="82" y="95" fill="#0f172a" font-size="22" font-weight="750">reach and hold</text>
+    <text x="82" y="119" fill="#64748b" font-size="14">keep a redundant arm at a target against gravity</text>
+
+    <!-- torso hint and shoulder -->
+    <rect x="82" y="150" width="14" height="70" rx="7" fill="#e2e8f0"/>
+    <!-- drifted forearm (ghost) -->
+    <path d="M166 152 L236 206" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10"/>
+    <circle cx="236" cy="206" r="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+    <!-- arm at the target -->
+    <path d="M96 200 L166 152 L246 176" fill="none" stroke="#334155" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="96" cy="200" r="6" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+    <circle cx="166" cy="152" r="5" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+    <circle cx="246" cy="176" r="6" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <!-- target ring -->
+    <circle cx="246" cy="176" r="14" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="266" y="168" fill="#1d4ed8" font-size="12" font-weight="700">target</text>
+    <!-- drift arrow -->
+    <path d="M250 190 C248 200 244 206 240 210" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+    <text x="250" y="222" fill="#dc2626" font-size="12" font-weight="700">drifts away</text>
+    <!-- gravity -->
+    <path d="M330 140 L330 176" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-slate)"/>
+    <text x="330" y="132" fill="#475569" font-size="11" font-weight="700" text-anchor="middle">gravity</text>
+
+    <!-- ball on a hill -->
+    <path d="M262 262 C280 232 320 232 338 262" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="300" cy="232" r="7" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+    <path d="M310 236 C318 240 324 246 328 254" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3" marker-end="url(#arrow-red)"/>
+    <text x="82" y="266" fill="#b45309" font-size="13" font-weight="750">unstable equilibrium</text>
+    <text x="82" y="284" fill="#64748b" font-size="12">a small error grows unless something corrects it</text>
+  </g>
+
+  <!-- Right card: the result -->
+  <g filter="url(#soft-shadow)">
+    <rect x="426" y="62" width="480" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="454" y="95" fill="#0f172a" font-size="22" font-weight="750">five fixed controllers, none holds</text>
+    <text x="454" y="119" fill="#64748b" font-size="14">MyoSuite myoArm; evaluation criterion fixed before the experiments</text>
+
+    <g font-size="13" font-weight="700" fill="#334155">
+      <circle cx="466" cy="146" r="9" fill="#2563eb"/><text x="466" y="150" fill="#ffffff" font-size="11" text-anchor="middle">1</text>
+      <text x="486" y="150">reflex toward a set posture</text>
+      <circle cx="466" cy="172" r="9" fill="#2563eb"/><text x="466" y="176" fill="#ffffff" font-size="11" text-anchor="middle">2</text>
+      <text x="486" y="176">the same reflex, stiffened by co-contraction</text>
+      <circle cx="466" cy="198" r="9" fill="#2563eb"/><text x="466" y="202" fill="#ffffff" font-size="11" text-anchor="middle">3</text>
+      <text x="486" y="202">endpoint impedance control</text>
+      <circle cx="466" cy="224" r="9" fill="#2563eb"/><text x="466" y="228" fill="#ffffff" font-size="11" text-anchor="middle">4</text>
+      <text x="486" y="228">gravity-compensation feedforward</text>
+      <circle cx="466" cy="250" r="9" fill="#2563eb"/><text x="466" y="254" fill="#ffffff" font-size="11" text-anchor="middle">5</text>
+      <text x="486" y="254">exact gravity balancing <tspan fill="#92400e" font-weight="600">— equilibrium at the goal itself</tspan></text>
+    </g>
+
+    <!-- no stable hold marks -->
+    <g stroke="#dc2626" stroke-width="2.5" stroke-linecap="round">
+      <g fill="#fef2f2">
+        <circle cx="866" cy="146" r="9"/><circle cx="866" cy="172" r="9"/><circle cx="866" cy="198" r="9"/><circle cx="866" cy="224" r="9"/><circle cx="866" cy="250" r="9"/>
+      </g>
+      <path d="M862 142 L870 150 M870 142 L862 150 M862 168 L870 176 M870 168 L862 176 M862 194 L870 202 M870 194 L862 202 M862 220 L870 228 M870 220 L862 228 M862 246 L870 254 M870 246 L862 254"/>
+    </g>
+    <text x="866" y="132" fill="#dc2626" font-size="11" font-weight="700" text-anchor="middle">stable hold</text>
+
+    <text x="454" y="280" fill="#0f766e" font-size="14" font-weight="750">the problem is stabilizing the equilibrium, not placing it</text>
+    <text x="454" y="294" fill="#64748b" font-size="12">next: learned selective impedance, predictive internal models</text>
+  </g>
+</svg>
