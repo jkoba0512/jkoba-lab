@@ -169,31 +169,34 @@ sections:
             <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
-        - name: Reach-and-hold posture stabilization
-          icon: hero/hand-raised
-          image: selected-topics/reach-and-hold-posture-stabilization.svg
+        - name: Climbing-fiber-like online readout adaptation
+          icon: hero/bolt
+          image: selected-topics/climbing-fiber-readout-adaptation.svg
           description: |-
-            Holding an arm still is not as simple as sending a fixed command. In a
-            musculoskeletal arm with more muscles than the task needs, gravity,
-            muscle geometry, and local dynamics can turn an apparently reasonable
-            posture into an unstable equilibrium: like a pencil balanced on its tip,
-            any small deviation grows unless something actively corrects it. This
-            research uses the MyoSuite myoArm model, under an evaluation criterion
-            fixed before the experiments, to test five standard controllers that do
-            not learn: a reflex that pulls toward a set posture, the same reflex
-            stiffened by co-contraction, endpoint impedance control, gravity-
-            compensation feedforward, and exact gravity balancing that places the
-            equilibrium at the goal itself. None produces a stable near-target hold
-            — not even exact balancing. The problem is therefore not where the
-            equilibrium is placed but whether the closed-loop body can stabilize it.
-            Reach-and-hold is an unstable-dynamics stabilization problem, and that
-            points toward controllers that learn selective impedance or use
-            predictive internal models.<br><br>
+            Robots and human bodies can fail to move as expected when the same motor
+            command is used under new conditions, such as carrying a load or being
+            pushed by an external force. Controllers built on liquid neural networks
+            and related continuous-time models (CfC) are usually trained offline and
+            have no built-in way to recalibrate once the body or the environment
+            changes, and retraining the whole network online is costly. This
+            research asks whether a much cheaper route works: freeze the trained
+            network and adapt only a small linear readout, driven by an error signal
+            inspired by the cerebellum's climbing fibers. In a simulated two-link
+            reaching task where a force field pushes the arm sideways, this readout-
+            only adaptation re-straightens the reach. When the field is removed, the
+            arm overshoots in the opposite direction — a mirror-image after-effect
+            that is the behavioral signature of internal-model learning — which a
+            feedback-only controller does not produce. The result carries over to a
+            sparse, neuron-like NCP wiring when the network's internal state is used
+            as the readout basis, holds across force-field strengths and directions,
+            and, within the range tested, never required touching the frozen core.
+            Adapting only the readout thus offers a biologically inspired, low-cost
+            adaptation layer for offline-trained continuous-time controllers.<br><br>
             Related preprint:<br>
-            <strong>Reach-and-hold at a musculoskeletal arm posture is an
-            unstable-equilibrium stabilization problem: the limits of fixed
-            equilibrium-point and impedance controllers</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
+            <strong>Climbing-fiber-like online readout adaptation in frozen
+            continuous-time networks reproduces force-field adaptation and
+            after-effects</strong><br>
+            DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
     design:
       layout: grid
 
