@@ -176,16 +176,22 @@ sections:
           image_size: compact
           image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
           description: |-
-            Holding an arm still is not as simple as sending a fixed command.
-            In a redundant musculoskeletal arm, gravity, muscle geometry, and
-            local dynamics can turn an apparently reasonable posture into an
-            unstable equilibrium. This research uses the MyoSuite myoArm model
-            to test fixed equilibrium-point, co-contraction, impedance,
-            gravity-compensation, and inverse-statics controllers. The result is
-            that none of these fixed, non-learning controllers produces a stable
-            near-target hold, even when the commanded equilibrium is close to
-            the goal. The problem is therefore not just where the equilibrium is
-            placed, but whether the closed-loop body can stabilize it.<br><br>
+            Holding an arm still is not as simple as sending a fixed command. In a
+            musculoskeletal arm with more muscles than the task needs, gravity,
+            muscle geometry, and local dynamics can turn an apparently reasonable
+            posture into an unstable equilibrium: like a pencil balanced on its tip,
+            any small deviation grows unless something actively corrects it. This
+            research uses the MyoSuite myoArm model, under an evaluation criterion
+            fixed before the experiments, to test five standard controllers that do
+            not learn: a reflex that pulls toward a set posture, the same reflex
+            stiffened by co-contraction, endpoint impedance control, gravity-
+            compensation feedforward, and exact gravity balancing that places the
+            equilibrium at the goal itself. None produces a stable near-target hold
+            — not even exact balancing. The problem is therefore not where the
+            equilibrium is placed but whether the closed-loop body can stabilize it.
+            Reach-and-hold is an unstable-dynamics stabilization problem, and that
+            points toward controllers that learn selective impedance or use
+            predictive internal models.<br><br>
             Related preprint:<br>
             <strong>Reach-and-hold at a musculoskeletal arm posture is an
             unstable-equilibrium stabilization problem: the limits of fixed
