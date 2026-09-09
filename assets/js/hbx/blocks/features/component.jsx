@@ -1,3 +1,4 @@
+import {useEffect, useRef, useState} from "preact/hooks";
 import {Icon} from "../../shared/components/Icon.jsx";
 
 function renderText(text) {
@@ -11,7 +12,55 @@ function renderText(text) {
     );
 }
 
-function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false}) {
+// Full-screen overlay for a card image. Closes on Escape, on the close
+// button, or on a click anywhere (the image included).
+function Lightbox({image, onClose}) {
+  const closeRef = useRef(null);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+
+  const bg = image.contain ? "bg-black" : "bg-white";
+
+  return (
+    <div
+      class="fixed inset-0 z-[120] flex flex-col items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-8 cursor-zoom-out"
+      role="dialog"
+      aria-modal="true"
+      aria-label={image.alt || "Enlarged image"}
+      onClick={onClose}
+    >
+      <button
+        ref={closeRef}
+        type="button"
+        class="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        aria-label="Close"
+        onClick={onClose}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <img src={image.src} alt={image.alt} class={`max-h-[85vh] max-w-full w-auto rounded-lg shadow-2xl object-contain ${bg}`} />
+      {image.caption && (
+        <p class="mt-3 max-w-3xl text-center text-sm text-gray-300" dangerouslySetInnerHTML={{__html: renderText(image.caption)}} />
+      )}
+    </div>
+  );
+}
+
+function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false, onZoom}) {
   const isCard = variant === "bento";
   const wrapperCls = isCard
     ? `relative h-full rounded-2xl ring-1 ring-gray-200 dark:ring-gray-700 bg-white dark:bg-gray-800/50 ${large ? "p-8 lg:p-10" : "p-6"} hover:ring-primary-300 dark:hover:ring-primary-600 hover:shadow-lg transition-all duration-300 overflow-hidden`
@@ -33,9 +82,14 @@ function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false}) 
     <div class={wrapperCls}>
       {showTopImage ? (
         <div class={`mb-5 w-full ${imageWidth}`}>
-          <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+          <button
+            type="button"
+            class="block w-full overflow-hidden rounded-lg border border-gray-200 bg-white p-0 shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-900 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+            aria-label={`Enlarge image: ${item.name || ""}`}
+            onClick={() => onZoom?.({src: topImageSrc, alt: item.name || "", caption: item.image_caption, contain: imageContain})}
+          >
             <img src={topImageSrc} alt={item.name || ""} class={`block ${imageAspect} w-full ${imageFit}`} loading="lazy" />
-          </div>
+          </button>
           {item.image_caption && (
             <p class="mt-1.5 text-xs leading-snug text-gray-500 dark:text-gray-400" dangerouslySetInnerHTML={{__html: renderText(item.image_caption)}} />
           )}
@@ -59,25 +113,30 @@ function FeatureCard({item, iconSvg, imgData, variant = "grid", large = false}) 
         <p class={`${descSize} text-gray-600 dark:text-gray-400 leading-relaxed`} dangerouslySetInnerHTML={{__html: renderText(item.description)}} />
       )}
       {large && imgData?.src && variant === "bento" && (
-        <div class="mt-6 -mx-2 lg:-mx-4">
+        <button
+          type="button"
+          class="mt-6 -mx-2 lg:-mx-4 block p-0 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-xl"
+          aria-label={`Enlarge image: ${item.name || ""}`}
+          onClick={() => onZoom?.({src: imgData.src, alt: item.name || "", caption: item.image_caption, contain: false})}
+        >
           <img src={imgData.src} alt={item.name || ""} class="w-full rounded-xl ring-1 ring-gray-200 dark:ring-gray-700" loading="lazy" />
-        </div>
+        </button>
       )}
     </div>
   );
 }
 
-function GridLayout({items, iconMap, item_images}) {
+function GridLayout({items, iconMap, item_images, onZoom}) {
   return (
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
       {items.map((item, idx) => (
-        <FeatureCard key={idx} item={item} iconSvg={item.icon ? iconMap[item.icon] : null} imgData={item_images?.[String(idx)]} variant="grid" />
+        <FeatureCard key={idx} item={item} iconSvg={item.icon ? iconMap[item.icon] : null} imgData={item_images?.[String(idx)]} variant="grid" onZoom={onZoom} />
       ))}
     </div>
   );
 }
 
-function BentoLayout({items, iconMap, item_images}) {
+function BentoLayout({items, iconMap, item_images, onZoom}) {
   return (
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 grid-flow-dense auto-rows-fr">
       {items.map((item, idx) => {
@@ -91,6 +150,7 @@ function BentoLayout({items, iconMap, item_images}) {
               imgData={item_images?.[String(idx)]}
               variant="bento"
               large={large}
+              onZoom={onZoom}
             />
           </div>
         );
@@ -103,6 +163,8 @@ export const FeaturesBlock = ({content = {}, design = {}, icon_svgs = {}, item_i
   const {title, subtitle, text, items: rawItems = []} = content;
   const items = Array.isArray(rawItems) ? rawItems : [];
   const layout = design.layout || "grid";
+  const [zoomed, setZoomed] = useState(null);
+  const closeZoom = () => setZoomed(null);
 
   return (
     <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
@@ -122,11 +184,12 @@ export const FeaturesBlock = ({content = {}, design = {}, icon_svgs = {}, item_i
 
         {items.length > 0 &&
           (layout === "bento" ? (
-            <BentoLayout items={items} iconMap={icon_svgs} item_images={item_images} />
+            <BentoLayout items={items} iconMap={icon_svgs} item_images={item_images} onZoom={setZoomed} />
           ) : (
-            <GridLayout items={items} iconMap={icon_svgs} item_images={item_images} />
+            <GridLayout items={items} iconMap={icon_svgs} item_images={item_images} onZoom={setZoomed} />
           ))}
       </div>
+      {zoomed && <Lightbox image={zoomed} onClose={closeZoom} />}
     </div>
   );
 };
