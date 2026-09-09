@@ -146,13 +146,25 @@ sections:
           image_caption: 'myoArm image: MyoSuite, Apache License 2.0'
           description: |-
             When we reach for a target, we combine several kinds of information:
-            what we see, what our muscles and joints tell us about the arm,
-            what we have learned from past experience, and what we predict will
-            happen next. But these sources are not always equally reliable.
-            Vision can be delayed, and a source that usually helps can sometimes
-            become misleading. This research uses a musculoskeletal robot model
-            to study how a controller should decide which information to trust,
-            and by how much, when reaching under such uncertainty.<br><br>
+            what we see, what our muscles and joints tell us about the arm, what we
+            have learned from past experience, and what we predict will happen next.
+            These sources are not equally reliable, and their reliability changes:
+            vision can be delayed, a prior that usually helps can be wrong, and a
+            visual cue can be false. Using a 34-muscle MyoSuite arm, two studies ask
+            how much a controller should trust each source. The first varies how
+            strongly a predictive state observer corrects its forward prediction
+            with sensory error. No single setting is best: intermediate correction
+            wins when sensing is immediate, heavy correction wins under sensory
+            delay, and relying on prediction alone loses 2–6 cm of accuracy. Gain
+            rules that adapt to conditions recover part of that loss but stay 1–2 cm
+            short of the ideal under delay. The second study estimates the target
+            from vision, proprioception, prediction, and task priors weighted by
+            their precision. Fixed precision weighting works when its assumptions
+            hold, but a trusted-yet-wrong prior biases the estimate more as vision
+            degrades, and a false cue's pull depends on the noise level, so the
+            weights themselves must be updated from data or learned. The common
+            lesson: reliability-weighted integration is necessary, but the weights
+            cannot be fixed in advance.<br><br>
             Related preprints:<br>
             <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
             Prediction-Error Correction Gain: Closed-Loop Evidence from a
