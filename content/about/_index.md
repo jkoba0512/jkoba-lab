@@ -36,7 +36,7 @@ sections:
     content:
       title: '🔬 Research Themes'
       text: |-
-        See [Research](/jkoba-lab/#section-focus-areas) for ongoing projects, [Publications](/jkoba-lab/publications/)
+        See [Research Topics](/jkoba-lab/research-topics/) for ongoing projects, [Publications](/jkoba-lab/publications/)
         for the publication record, and [People](/jkoba-lab/people/) for lab members.
 
         - **Dynamical Neural Networks (LNN / LSTM / Mamba)** — neural networks

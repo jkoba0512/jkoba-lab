@@ -28,7 +28,7 @@ sections:
     content:
       title: 'Research Themes'
       text: |-
-        研究テーマは [Research](/jkoba-lab/ja/#section-focus-areas)、論文一覧は [Publications](/jkoba-lab/publications/)、メンバーは [People](/jkoba-lab/ja/people/) をご覧ください。
+        個々の研究の紹介は [Research Topics](/jkoba-lab/ja/research-topics/)、論文一覧は [Publications](/jkoba-lab/publications/)、メンバーは [People](/jkoba-lab/ja/people/) をご覧ください。
 
         - **ダイナミクスを持つニューラルネットワーク（LNN / LSTM / Mamba）** — ロバストなロボット制御のための、内部状態が時間発展するニューラルネットワーク
         - **Active Inference / Free Energy Principle** — 自由エネルギー原理に基づく目標指向的なロボットアーム制御
