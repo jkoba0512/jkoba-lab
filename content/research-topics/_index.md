@@ -21,35 +21,46 @@ sections:
     content:
       title: ''
       items:
-        - name: Task-compatible active calibration and terminal controllability
+        - name: Task-compatible active calibration and terminal feasibility
           icon: hero/viewfinder-circle
           image: selected-topics/terminal-controllability-active-calibration.svg
           description: |-
-            A robot whose link lengths, tool, or payload are uncertain can move in
-            order to measure itself. But it cannot move freely: the same motion has
-            to keep the ongoing task feasible. This research studies that trade-off
-            in a redundant planar arm with unknown link lengths that must calibrate
-            itself and then complete a reaching task within a fixed time horizon. It
-            first develops a probing scheme that plans the exploratory motion
-            several steps ahead rather than one, so the arm can make its unknown
-            parameters identifiable while drifting little from the task; across 50
-            trials this eliminates every calibration failure. Yet many of those
-            trials still fail the task: the arm finishes calibration with accurate
-            parameters but in a posture from which the goal can no longer be reached
-            within the steps that remain. Neither parameter error nor standard
-            singularity measures predict which trials fail, whereas a short rollout
-            from the state where calibration ends separates them perfectly. This
-            terminal controllability is therefore a requirement of its own, and
-            managing it — keeping the posture well-conditioned during exploration
-            and allowing more time for the task — removes the remaining failures.
-            Active calibration thus has three distinct requirements: creating
-            identifiability, exploring in a task-compatible way, and ending the
-            exploration in a state from which the task is still executable. The
-            third can fail even when the first two are met.<br><br>
+            A robot can learn its own body accurately and still fail the task it
+            was learning for. Two studies examine this gap, from unknown link
+            lengths to uncertain masses and inertias. Both ask how a robot can
+            gather information through movement while preserving its ability to
+            finish the task.<br><br>
+            The first study considers geometric calibration in a redundant planar
+            arm. Planning exploratory motion several steps ahead makes unknown
+            link lengths identifiable while limiting task drift. Across 50 seeds,
+            calibration failures disappear, but reaching failures remain: accurate
+            parameters do not guarantee that the arm can reach the goal within
+            the available time. A short rollout from the post-calibration state
+            separates successes from failures better than parameter error or
+            static singularity measures. Longer execution and null-space posture
+            regularization together remove the remaining failures in the tested
+            conditions.<br><br>
+            The second study extends the question to inertial self-calibration
+            in simulations of planar arms and a seven-degree-of-freedom KUKA LBR
+            iiwa. It separates the parameter combinations that can be identified,
+            the information obtainable through task-compatible excitation, and
+            the feasibility of the final reach-and-hold maneuver. Null-space
+            motion preserves essentially all free-excitation information in the
+            redundant planar arm, while acceleration-estimation bias limits gains
+            in the iiwa. Even a well-calibrated model can fail under torque, time,
+            and velocity limits. A terminal-feasibility risk that accounts for
+            velocity predicts these failures better than calibration error alone.
+            Together, the studies show why self-calibration must assess both what
+            the robot has learned and whether its current state and constraints
+            still allow it to finish the task.<br><br>
             Related publication:<br>
             <strong>When Identifiability Is Not Enough: Terminal Controllability
             in Task-Compatible Active Calibration</strong><br>
-            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
+            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a><br><br>
+            Related preprint:<br>
+            <strong>Active Inertial Self-Calibration Beyond Identifiability:
+            Task-Compatible Excitation and Terminal Feasibility</strong><br>
+            DOI: <a href="https://doi.org/10.2139/ssrn.7507404" target="_blank" rel="noopener">10.2139/ssrn.7507404</a>
         - name: Reliability-dependent sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg

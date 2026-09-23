@@ -65,15 +65,21 @@ sections:
       text: |-
         研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。<a href="/jkoba-lab/ja/research-topics/" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">すべての研究トピックを見る &rarr;</a>
       items:
-        - name: Task-compatible active calibration and terminal controllability
+        - name: Task-compatible active calibration and terminal feasibility
           icon: hero/viewfinder-circle
           image: selected-topics/terminal-controllability-active-calibration.svg
           description: |-
-            リンクの長さや手先の工具、運んでいる荷物が未知のロボットは、自ら動くことで自分の身体を測ることができます。ただし、その動きは自由ではありません。同じ運動が、実行中のタスクを達成できる状態を保つものでなければならないからです。この研究では、リンク長が未知の冗長な平面アームが、自己校正を行ってから決められた時間内にリーチング課題を完了するという設定で、このトレードオフを調べています。まず、探索運動を 1 ステップ先ではなく数ステップ先まで見て計画する探索則を開発し、タスクからのずれを抑えながら未知パラメータを同定可能にしました。50 試行で校正の失敗はゼロになります。それでも、タスクに失敗する試行が多く残ります。校正は正確に終わっているのに、残りのステップ数では目標に到達できない姿勢にアームが取り残されるのです。どの試行が失敗するかは、パラメータの推定誤差でも通常の特異点指標でも予測できませんでした。一方、校正を終えた状態から短時間だけ先読みするロールアウトを使うと、成功する試行と失敗する試行を完全に見分けることができました。この終端可制御性（terminal controllability）は独立した要件であり、探索中に姿勢を良条件に保ち、タスクの実行時間を延ばすことで、残っていた失敗もなくなります。したがって能動的キャリブレーションには、同定可能性をつくること、タスクと両立する形で探索すること、探索を終えた時点でタスクを実行できる状態にあること、という 3 つの独立した要件があり、前の 2 つを満たしても 3 つ目で失敗しうるのです。<br><br>
+            ロボットが自分の身体を正確に学習できても、その学習が必要だったタスクに成功するとは限りません。この問題を、リンク長などの幾何パラメータと、質量・慣性などの動特性パラメータを対象とする 2 つの研究で調べています。共通する問いは、タスクを最後まで実行できる状態を保ちながら、自らの運動を通じて身体の情報をどう獲得するか、というものです。<br><br>
+            1 つ目の研究は、リンク長が未知の冗長な平面アームを扱います。数ステップ先まで探索運動を計画することで、タスクからのずれを抑えながらリンク長を同定可能にし、50 試行で校正の失敗をなくしました。それでも、リーチングの失敗は残ります。パラメータが正確でも、校正後の姿勢から決められた時間内に目標へ到達できるとは限らないためです。校正後の状態から短時間の動きを予測すると、パラメータ誤差や静的な特異点指標よりもよく成功と失敗を見分けられました。検証した条件では、タスクの実行時間を延ばすことと、手先の運動に影響しない自由度を使って姿勢を整えることを組み合わせると、残っていた失敗もなくなりました。<br><br>
+            2 つ目の研究は、この問いを慣性パラメータの自己校正へ広げ、平面アームと 7 自由度の KUKA LBR iiwa のシミュレーションで検証します。ここでは、どのパラメータの組合せが同定可能か、タスクと両立する励起運動でどれだけ情報を得られるか、最後の到達・保持動作を実行できるか、という 3 層に分けて考えます。冗長な平面アームでは、手先を動かさない零空間の運動で、自由な励起運動とほぼ同じ情報を得られました。一方、iiwa では加速度推定の偏りが情報獲得の効果を制限します。また、校正が正確でも、トルク・時間・速度の制約によって到達・保持に失敗します。速度も考慮して終端動作の実行可能性を評価するリスク指標は、校正誤差だけよりもよくこの失敗を予測しました。両研究が示すのは、自己校正では「身体をどれだけ正確に学んだか」とともに、「現在の状態と制約のもとでタスクを完了できるか」を評価する必要がある、ということです。<br><br>
             関連論文:<br>
             <strong>When Identifiability Is Not Enough: Terminal Controllability
             in Task-Compatible Active Calibration</strong><br>
-            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a>
+            DOI: <a href="https://doi.org/10.1109/LRA.2026.3719194" target="_blank" rel="noopener">10.1109/LRA.2026.3719194</a><br><br>
+            関連プレプリント:<br>
+            <strong>Active Inertial Self-Calibration Beyond Identifiability:
+            Task-Compatible Excitation and Terminal Feasibility</strong><br>
+            DOI: <a href="https://doi.org/10.2139/ssrn.7507404" target="_blank" rel="noopener">10.2139/ssrn.7507404</a>
         - name: Reliability-dependent sensory reweighting in quiet standing
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg
