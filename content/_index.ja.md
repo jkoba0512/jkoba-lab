@@ -29,7 +29,7 @@ sections:
       # 日本語版のブログ記事はないため、英語版の記事一覧をそのまま表示する。
       source_language: en
       page_type: blog
-      count: 7
+      count: 3
 
   - block: focus-areas
     content:
