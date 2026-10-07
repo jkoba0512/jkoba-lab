@@ -148,38 +148,37 @@ sections:
             continuous-time networks reproduces force-field adaptation and
             after-effects</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
-        - name: Adaptive sensory weighting in musculoskeletal reaching
+        - name: Learning source weights for target-position estimation
           icon: hero/adjustments-horizontal
           image: selected-topics/adaptive-sensory-weighting.svg
           description: |-
-            When we reach for a target, we combine several kinds of information:
-            what we see, what our muscles and joints tell us about the arm, what we
-            have learned from past experience, and what we predict will happen next.
-            These sources are not equally reliable, and their reliability changes:
-            vision can be delayed, a prior that usually helps can be wrong, and a
-            visual cue can be false. Using a 34-muscle MyoSuite arm, two studies ask
-            how much a controller should trust each source. The first varies how
-            strongly a predictive state observer corrects its forward prediction
-            with sensory error. No single setting is best: intermediate correction
-            wins when sensing is immediate, heavy correction wins under sensory
-            delay, and relying on prediction alone loses 2–6 cm of accuracy. Gain
-            rules that adapt to conditions recover part of that loss but stay 1–2 cm
-            short of the ideal under delay. The second study estimates the target
-            from vision, proprioception, prediction, and task priors weighted by
-            their precision. Fixed precision weighting works when its assumptions
-            hold, but a trusted-yet-wrong prior biases the estimate more as vision
-            degrades, and a false cue's pull depends on the noise level, so the
-            weights themselves must be updated from data or learned. The common
-            lesson: reliability-weighted integration is necessary, but the weights
-            cannot be fixed in advance.<br><br>
-            Related preprints:<br>
-            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
-            Prediction-Error Correction Gain: Closed-Loop Evidence from a
-            Muscle-Driven Reaching Task</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
-            <strong>Reliability-weighted target-position estimation in a
-            musculoskeletal arm model: adaptive priors and learned source
-            weighting under violations of fixed-precision assumptions</strong><br>
+            How should we combine uncertain measurements of an object's location
+            when their reliability changes? This study compares a method that
+            uses the same <strong>learned weights</strong> for all inputs during
+            evaluation with a method that computes weights from the current inputs
+            using a <strong>learned rule</strong>. In simulations, a target stays
+            fixed within each trial, and the estimator combines the current
+            measurement with the mean of three initial measurements using weighted
+            integration. Learning uses noisy reference
+            measurements; the estimator receives no true target positions.
+            Calibration, training, validation, and independent evaluation are
+            repeated 100 times in each of four error conditions. Recalibration and
+            fixed-weight learning explain most of the improvement over earlier
+            supplied weights under reduced measurement accuracy and temporal
+            correlation. With occasional large measurement errors, input-dependent
+            weighting reduces mean squared error by 4.05% relative to learned
+            fixed weights and assigns less weight, on average, to measurements
+            with added offsets. Its additional benefit is below 0.5% under
+            independent errors and reduced current accuracy, while fixed weights
+            have slightly lower mean error under temporal correlation. Longer
+            observation histories perform better in several conditions. The study
+            shows the benefits and limits of recalibration, input-dependent
+            weighting, and observation history within these measurement models;
+            shared coordinate bias and correlated reference errors limit
+            conclusions about physical accuracy.<br><br>
+            Related preprint:<br>
+            <strong>Learning source weights for target-position estimation:
+            comparing fixed weights and an input-dependent rule</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid

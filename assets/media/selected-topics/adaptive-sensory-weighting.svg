@@ -1,127 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
-  <title id="title">Adaptive sensory weighting in musculoskeletal reaching</title>
-  <desc id="desc">Left: vision, body sense, prediction, and a prior are each given a weight and combined into one target estimate. Right: the best weights change with conditions: moderate correction when sensing is immediate, more trust in sensing when it is delayed, and biased estimates when a prior is wrong or a cue is false, so the weights must be updated from data or learned.</desc>
+  <title id="title">Learning source weights for target-position estimation</title>
+  <desc id="desc">Current measurements and the mean of three initial measurements are combined using learned fixed weights or an input-dependent rule. Learning uses noisy references without true target positions. The input-dependent rule reduces mean squared error by 4.05% with occasional large errors, adds less than 0.5% under independent errors or reduced current accuracy, and is slightly worse than fixed weights under temporal correlation.</desc>
   <defs>
-    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 Z" fill="#334155"/>
-    </marker>
     <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#f8fafc"/>
       <stop offset="1" stop-color="#eef2ff"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-12%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#0f172a" flood-opacity=".13"/>
-    </filter>
   </defs>
-
   <rect width="960" height="360" rx="28" fill="url(#background)"/>
-  <rect x="24" y="24" width="912" height="312" rx="22" fill="#ffffff" opacity=".8"/>
-
-  <!-- Left card: the integration -->
-  <g filter="url(#soft-shadow)">
-    <rect x="54" y="62" width="318" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
-  </g>
   <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
-    <text x="82" y="95" fill="#0f172a" font-size="22" font-weight="750">one estimate, four sources</text>
-    <text x="82" y="119" fill="#64748b" font-size="14">each source counts by its weight (precision)</text>
-
-    <!-- source tags with weight bars -->
-    <g>
-      <rect x="82" y="138" width="92" height="24" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
-      <path d="M92 150 C97 143 109 143 114 150 C109 157 97 157 92 150Z" fill="none" stroke="#2563eb" stroke-width="2"/>
-      <circle cx="103" cy="150" r="3" fill="#2563eb"/>
-      <text x="120" y="155" fill="#1d4ed8" font-size="13" font-weight="700">vision</text>
-      <rect x="184" y="146" width="64" height="8" rx="4" fill="#dbeafe"/>
-      <rect x="184" y="146" width="40" height="8" rx="4" fill="#2563eb"/>
-      <path d="M248 150 C266 150 274 172 284 184" fill="none" stroke="#2563eb" stroke-width="2"/>
-    </g>
-    <g>
-      <rect x="82" y="170" width="92" height="24" rx="12" fill="#ecfdf5" stroke="#99f6e4"/>
-      <path d="M92 182 C96 174 104 174 108 182 C112 190 120 190 124 182" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round"/>
-      <text x="130" y="187" fill="#0f766e" font-size="13" font-weight="700">body</text>
-      <rect x="184" y="178" width="64" height="8" rx="4" fill="#ccfbf1"/>
-      <rect x="184" y="178" width="34" height="8" rx="4" fill="#0f766e"/>
-      <path d="M248 182 C266 182 272 188 284 190" fill="none" stroke="#0f766e" stroke-width="2"/>
-    </g>
-    <g>
-      <rect x="82" y="202" width="92" height="24" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
-      <path d="M92 214 L104 214 M100 210 L104 214 L100 218" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
-      <text x="110" y="219" fill="#475569" font-size="13" font-weight="700">prediction</text>
-      <rect x="184" y="210" width="64" height="8" rx="4" fill="#e2e8f0"/>
-      <rect x="184" y="210" width="46" height="8" rx="4" fill="#475569"/>
-      <path d="M248 214 C266 214 272 206 284 200" fill="none" stroke="#475569" stroke-width="2"/>
-    </g>
-    <g>
-      <rect x="82" y="234" width="92" height="24" rx="12" fill="#fffbeb" stroke="#fde68a"/>
-      <path d="M92 250 C96 240 108 240 112 250" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round"/>
-      <text x="120" y="251" fill="#92400e" font-size="13" font-weight="700">prior</text>
-      <rect x="184" y="242" width="64" height="8" rx="4" fill="#fef3c7"/>
-      <rect x="184" y="242" width="28" height="8" rx="4" fill="#b45309"/>
-      <path d="M248 246 C266 246 274 222 284 206" fill="none" stroke="#b45309" stroke-width="2"/>
-    </g>
-
-    <!-- estimate -->
-    <circle cx="312" cy="194" r="28" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
-    <circle cx="312" cy="194" r="4" fill="#334155"/>
-    <circle cx="312" cy="194" r="14" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="312" y="238" fill="#334155" font-size="12" font-weight="700" text-anchor="middle">target</text>
-    <text x="312" y="252" fill="#334155" font-size="12" font-weight="700" text-anchor="middle">estimate</text>
-
-    <text x="82" y="284" fill="#64748b" font-size="12">34-muscle MyoSuite arm, reaching under uncertainty</text>
-  </g>
-
-  <!-- Right card: the finding -->
-  <g filter="url(#soft-shadow)">
-    <rect x="426" y="62" width="480" height="236" rx="20" fill="#ffffff" stroke="#dbe4ee"/>
-  </g>
-  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
-    <text x="454" y="95" fill="#0f172a" font-size="22" font-weight="750">the right weights depend on conditions</text>
-    <text x="454" y="119" fill="#64748b" font-size="14">no single setting is best everywhere</text>
-
-    <path d="M594 138 L594 250 M746 138 L746 250" fill="none" stroke="#e2e8f0" stroke-width="2"/>
-
-    <!-- column 1: sensing immediate -->
-    <g>
-      <text x="454" y="152" fill="#334155" font-size="13" font-weight="750">sensing immediate</text>
-      <text x="454" y="178" fill="#475569" font-size="11" font-weight="700">prediction</text>
-      <rect x="516" y="170" width="66" height="8" rx="4" fill="#e2e8f0"/>
-      <rect x="516" y="170" width="40" height="8" rx="4" fill="#475569"/>
-      <text x="454" y="202" fill="#1d4ed8" font-size="11" font-weight="700">sensing</text>
-      <rect x="516" y="194" width="66" height="8" rx="4" fill="#dbeafe"/>
-      <rect x="516" y="194" width="30" height="8" rx="4" fill="#2563eb"/>
-      <text x="454" y="230" fill="#0f766e" font-size="12" font-weight="750">moderate correction</text>
-      <text x="454" y="245" fill="#0f766e" font-size="12" font-weight="750">is best</text>
-    </g>
-
-    <!-- column 2: sensing delayed -->
-    <g>
-      <text x="608" y="152" fill="#334155" font-size="13" font-weight="750">sensing delayed</text>
-      <text x="608" y="178" fill="#475569" font-size="11" font-weight="700">prediction</text>
-      <rect x="670" y="170" width="66" height="8" rx="4" fill="#e2e8f0"/>
-      <rect x="670" y="170" width="16" height="8" rx="4" fill="#475569"/>
-      <text x="608" y="202" fill="#1d4ed8" font-size="11" font-weight="700">sensing</text>
-      <rect x="670" y="194" width="66" height="8" rx="4" fill="#dbeafe"/>
-      <rect x="670" y="194" width="60" height="8" rx="4" fill="#2563eb"/>
-      <text x="608" y="230" fill="#0f766e" font-size="12" font-weight="750">trust sensing</text>
-      <text x="608" y="245" fill="#0f766e" font-size="12" font-weight="750">more</text>
-    </g>
-
-    <!-- column 3: prior wrong, cue false -->
-    <g>
-      <text x="760" y="152" fill="#334155" font-size="13" font-weight="750">wrong prior or cue</text>
-      <text x="760" y="178" fill="#92400e" font-size="11" font-weight="700">prior</text>
-      <rect x="822" y="170" width="66" height="8" rx="4" fill="#fef3c7"/>
-      <rect x="822" y="170" width="48" height="8" rx="4" fill="#b45309"/>
-      <text x="892" y="179" fill="#dc2626" font-size="11" font-weight="800" text-anchor="end">✗</text>
-      <text x="760" y="202" fill="#1d4ed8" font-size="11" font-weight="700">vision</text>
-      <rect x="822" y="194" width="66" height="8" rx="4" fill="#dbeafe"/>
-      <rect x="822" y="194" width="22" height="8" rx="4" fill="#2563eb"/>
-      <text x="892" y="203" fill="#dc2626" font-size="11" font-weight="800" text-anchor="end">✗</text>
-      <text x="760" y="230" fill="#dc2626" font-size="12" font-weight="750">fixed weights</text>
-      <text x="760" y="245" fill="#dc2626" font-size="12" font-weight="750">bias the estimate</text>
-    </g>
-
-    <text x="454" y="276" fill="#0f766e" font-size="14" font-weight="750">the weights must be updated from data or learned</text>
-    <text x="454" y="292" fill="#64748b" font-size="12">reliability weighting is needed; the weights cannot be fixed in advance</text>
+    <rect x="30" y="30" width="410" height="300" rx="20" fill="#fff" stroke="#dbe4ee"/>
+    <rect x="460" y="30" width="470" height="300" rx="20" fill="#fff" stroke="#dbe4ee"/>
+    <text x="54" y="68" fill="#0f172a" font-size="22" font-weight="700">Combine uncertain measurements</text>
+    <text x="54" y="94" fill="#64748b" font-size="14">A fixed target within each simulated trial</text>
+    <rect x="54" y="116" width="362" height="58" rx="12" fill="#f1f5f9"/>
+    <text x="235" y="140" text-anchor="middle" fill="#475569" font-size="14">Current measurement</text>
+    <text x="235" y="160" text-anchor="middle" fill="#475569" font-size="13">+ mean of 3 initial measurements</text>
+    <path d="M235 182 V204 M228 194 L235 204 L242 194" fill="none" stroke="#334155" stroke-width="2"/>
+    <rect x="54" y="212" width="174" height="54" rx="12" fill="#eff6ff"/>
+    <rect x="242" y="212" width="174" height="54" rx="12" fill="#ecfdf5"/>
+    <text x="141" y="235" text-anchor="middle" fill="#1d4ed8" font-size="14">Learned fixed</text>
+    <text x="141" y="254" text-anchor="middle" fill="#1d4ed8" font-size="14">weights</text>
+    <text x="329" y="235" text-anchor="middle" fill="#0f766e" font-size="14">Input-dependent</text>
+    <text x="329" y="254" text-anchor="middle" fill="#0f766e" font-size="14">weights</text>
+    <text x="54" y="296" fill="#64748b" font-size="13">Learn from noisy references; no true target positions</text>
+    <text x="484" y="68" fill="#0f172a" font-size="22" font-weight="700">When do changing weights help?</text>
+    <text x="484" y="94" fill="#64748b" font-size="14">Compared with learned fixed weights</text>
+    <text x="484" y="134" fill="#334155" font-size="15" font-weight="700">Occasional large measurement errors</text>
+    <text x="484" y="158" fill="#0f766e" font-size="19" font-weight="700">4.05% lower mean squared error</text>
+    <text x="484" y="198" fill="#334155" font-size="15" font-weight="700">Independent errors / reduced current accuracy</text>
+    <text x="484" y="222" fill="#64748b" font-size="15">Less than 0.5% additional improvement</text>
+    <text x="484" y="262" fill="#334155" font-size="15" font-weight="700">Temporally correlated errors</text>
+    <text x="484" y="286" fill="#64748b" font-size="15">Learned fixed weights have slightly lower error</text>
+    <text x="484" y="311" fill="#64748b" font-size="12">Longer observation histories help in several conditions</text>
   </g>
 </svg>

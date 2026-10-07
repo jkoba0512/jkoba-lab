@@ -63,19 +63,14 @@ sections:
             continuous-time networks reproduces force-field adaptation and
             after-effects</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
-        - name: Adaptive sensory weighting in musculoskeletal reaching
+        - name: Learning source weights for target-position estimation
           icon: hero/adjustments-horizontal
           image: selected-topics/adaptive-sensory-weighting.svg
           description: |-
-            目標に向かって手を伸ばすとき、私たちは目で見た位置、筋肉や関節から感じる腕の位置、これまでの経験、そして「こう動くはずだ」という予測を組み合わせています。これらの情報は同じように信頼できるわけではなく、信頼性は状況で変わります。視覚は遅れることがあり、ふだん役に立つ事前の思い込みが間違っていることもあれば、視覚の手がかりが偽物のこともあります。34 の筋をもつ MyoSuite のアームを使い、2 つの研究で、制御器が各情報源をどのくらい信頼すべきかを調べました。1 つ目は、予測型の状態観測器が自分の予測を感覚の誤差でどれだけ強く補正するかを変えた研究です。最適な設定は一つに決まりません。感覚に遅れがなければ中程度の補正が最も良く、感覚が遅れる条件では強い補正が勝ち、予測だけに頼ると精度が 2〜6 cm 落ちます。条件に応じて補正の強さを変える適応則はその損失の一部を取り戻しますが、遅れ条件では理想より 1〜2 cm 及びません。2 つ目は、視覚・固有感覚・予測・タスクの事前分布をそれぞれの precision で重み付けして目標位置を推定する研究です。固定した precision の重み付けは前提が合っているときには機能しますが、信頼しているのに間違った事前分布は視覚が悪くなるほど推定を偏らせ、偽の手がかりの影響はノイズの大きさで変わります。したがって重みそのものをデータから更新するか、学習する必要があります。両者に共通する教訓は、信頼性で重み付けする統合は必要だが、その重みを前もって固定することはできない、ということです。<br><br>
+            物体の位置を示す複数の測定値に誤差があり、その信頼性も変わるとき、どのような重みで組み合わせればよいのでしょうか。この研究では、<strong>学習した重み</strong>を評価中のすべての入力に共通して使う方法と、<strong>学習した規則</strong>によって現在の入力から重みを計算する方法を比較します。シミュレーションでは、各試行内で目標位置を一定に保ち、推定器は現在の測定値と最初の 3 回の測定値の平均を、重みを付けて組み合わせます。学習にはノイズを含む参照測定値を使い、真の目標位置は推定器に与えません。座標の校正、学習、検証、独立評価を、4 種類の誤差条件それぞれで 100 回繰り返しました。測定精度の低下や時間相関のある条件では、以前に設定された重みからの改善の大部分を、再校正と固定重みの学習が説明しました。ときどき大きな測定誤差が生じる条件では、入力依存の重み付けが、学習した固定重みに比べて平均二乗誤差を 4.05% 減らし、オフセットが加わった測定値への重みを平均的に小さくしました。一方、独立誤差や現在の測定精度が低下した条件での追加の改善は 0.5% 未満で、時間相関のある条件では固定重みの誤差がわずかに小さくなりました。より長い観測履歴を使う方法は、複数の条件で良い結果を示しました。この研究は、これらの測定モデルの範囲で、再校正、入力依存の重み付け、観測履歴の利点と限界を示します。共通の座標バイアスや参照誤差の相関は、物理的な正確さについての結論を制約します。<br><br>
             関連プレプリント:<br>
-            <strong>How a Predictive State Observer Can Self-Adapt Its Sensory
-            Prediction-Error Correction Gain: Closed-Loop Evidence from a
-            Muscle-Driven Reaching Task</strong><br>
-            DOI: <a href="https://doi.org/10.64898/2026.06.03.729790" target="_blank" rel="noopener">10.64898/2026.06.03.729790</a><br><br>
-            <strong>Reliability-weighted target-position estimation in a
-            musculoskeletal arm model: adaptive priors and learned source
-            weighting under violations of fixed-precision assumptions</strong><br>
+            <strong>Learning source weights for target-position estimation:
+            comparing fixed weights and an input-dependent rule</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.08.730995" target="_blank" rel="noopener">10.64898/2026.06.08.730995</a>
     design:
       layout: grid

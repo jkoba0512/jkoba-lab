@@ -18,3 +18,5 @@ Our new bioRxiv preprint, "Reliability-weighted target-position estimation in a 
 DOI: [10.64898/2026.06.08.730995](https://doi.org/10.64898/2026.06.08.730995)
 
 [Read the preprint](https://doi.org/10.64898/2026.06.08.730995).
+
+Update (October 6, 2026): Version 2 is available under the new title "Learning source weights for target-position estimation: comparing fixed weights and an input-dependent rule." See the [revision announcement](../2026-10-06-learning-source-weights-preprint-revised/).
