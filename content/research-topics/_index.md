@@ -76,7 +76,10 @@ sections:
             one. A one-link inverted pendulum estimates its posture and selects
             ankle torque through a single free-energy objective, weighting each
             channel's prediction error by a precision that expresses how far that
-            channel is trusted. The perturbation itself is applied as a misleading
+            channel is trusted. The revised model includes intrinsic ankle
+            stiffness. Its fixed-point analysis predicts the steady posture and
+            linear stability from sensory precisions, goal dynamics, and stiffness.
+            The perturbation itself is applied as a misleading
             signal in one channel; the sensory context — that this channel is now
             unreliable — enters the model only through that channel's precision,
             while the body dynamics and the upright goal are held fixed. A fixed-
@@ -87,8 +90,12 @@ sections:
             postural shifts by about 82%, as the analysis predicts, and the
             reduction appears in that channel's contribution to belief updating, so
             the reweighting happens in belief updating rather than in the choice of
-            action. A graded mapping from reliability to precision controls a
-            channel's influence smoothly, whereas reducing every precision at once
+            action. Across 115 trials, settled equilibria matched predictions within
+            0.001 degrees. Intrinsic stiffness bounded the effect for physical
+            support tilts, and a within-trial precision switch confirmed that belief
+            updating carries the change to ankle torque. A graded mapping from
+            reliability to precision controls a channel's influence smoothly,
+            whereas reducing every precision at once
             does not have the same effect: reweighting is relative and channel-
             selective rather than an overall damping of the senses.<br><br>
             Related preprint:<br>
