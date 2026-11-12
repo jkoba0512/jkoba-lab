@@ -65,7 +65,7 @@ sections:
       text: |-
         研究の考え方を、技術的な詳細に入る前に把握できるように短く紹介します。論文タイトルと DOI は原文のまま掲載しています。<a href="/jkoba-lab/ja/research-topics/" class="text-primary-600 dark:text-primary-400 font-medium hover:underline">すべての研究トピックを見る &rarr;</a>
       items:
-        - name: Task-compatible active calibration and terminal feasibility
+        - name: タスクと両立する能動的校正と終端実行可能性
           icon: hero/viewfinder-circle
           image: selected-topics/terminal-controllability-active-calibration.svg
           description: |-
@@ -80,7 +80,7 @@ sections:
             <strong>Active Inertial Self-Calibration Beyond Identifiability:
             Task-Compatible Excitation and Terminal Feasibility</strong><br>
             DOI: <a href="https://doi.org/10.2139/ssrn.7507404" target="_blank" rel="noopener">10.2139/ssrn.7507404</a>
-        - name: Reliability-dependent sensory reweighting in quiet standing
+        - name: 静止立位における信頼性依存の感覚再重み付け
           icon: hero/scale
           image: selected-topics/quiet-standing-sensory-reweighting.svg
           description: |-
@@ -89,15 +89,14 @@ sections:
             <strong>A Mathematical Model of Reliability-Dependent Sensory
             Reweighting in Quiet Standing</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.23.733972" target="_blank" rel="noopener">10.64898/2026.06.23.733972</a>
-        - name: Climbing-fiber-like online readout adaptation
+        - name: 読み出し適応と学習後に残る補償
           icon: hero/bolt
           image: selected-topics/climbing-fiber-readout-adaptation.svg
           description: |-
-            ロボットや人の身体は、同じ命令を出しても、荷物を持ったり外から力を受けたりすると、思った通りに動かなくなることがあります。Liquid Neural Network（CfC）などの連続時間モデルで作った制御器は、ふつうオフラインで学習され、身体や環境が変わったあとにオンラインで再校正する仕組みを持っていません。ネットワーク全体をオンラインで学習し直すのはコストが高すぎます。この研究は、もっと安い方法で足りるかを問います。学習済みのネットワークは凍結したまま、小脳の登上線維に着想を得た誤差信号で、小さな線形の読み出し層だけを適応させるのです。腕を横へ押す力場をかけた 2 リンクのリーチング課題のシミュレーションでは、この読み出しだけの適応で動きが再びまっすぐになります。力場を取り除くと、腕は逆方向へ行き過ぎます。この鏡像の「残効」は内部モデルを学習したことの行動上の特徴で、フィードバックだけの制御器では現れません。この結果は、ネットワークの内部状態を読み出しの基底に使えば、疎で神経回路に近い NCP 配線にもそのまま通用し、力場の強さや方向を変えても成り立ち、試した範囲では凍結したコアに手を入れる必要は一度もありませんでした。読み出しだけを適応させることは、オフラインで学習した連続時間制御器に対する、生物に着想を得た低コストの適応層になるのです。<br><br>
+            腕が動きをそらす力に適応したあとには、その力を取り除くと反対方向へずれる「残効」が現れることがあります。この研究では、残効だけでなく、学習された補償の内容や、学習を止めた後にも性能が保たれるかを調べます。速度に応じた横向きの力が加わる条件で、トルク駆動の 2 リンク腕が 8 方向へ到達運動を行うシミュレーションを使いました。適応するのは線形のトルク読み出しだけで、その特徴を生成するネットワークは固定します。疎な神経回路型配線を含む 3 種類の連続時間ネットワーク構成に加え、echo-state network と動径基底関数を特徴に使う構成を比較し、読み出しには LMS または RLS の更新則を用います。3 つのモデル初期値で学習率を選び、別の 10 初期値と 3 種類の力場で評価しました。6 方式すべてが固定読み出しの基準より追跡性能を改善し、全評価試行で設定した残効基準を満たしました。さらに、学習された出力変化が理想的な補償にどれだけ近いかを測り、更新を止めた最終読み出しでも制御性能を評価しました。更新停止後の追跡誤差は、適応前の制御器に比べて 40〜97%低下しました。ただし、準備条件やハイパーパラメータが方式間で異なるため、特徴の種類や更新則だけの効果を切り分けた比較ではありません。<br><br>
             関連プレプリント:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
+            <strong>Readout adaptation in simulated arm reaching: learned
+            compensation and performance after updates stop</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
     design:
       layout: grid

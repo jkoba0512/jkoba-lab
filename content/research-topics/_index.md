@@ -127,33 +127,33 @@ sections:
             unstable-equilibrium stabilization problem: the limits of fixed
             equilibrium-point and impedance controllers</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.15.732510" target="_blank" rel="noopener">10.64898/2026.06.15.732510</a>
-        - name: Climbing-fiber-like online readout adaptation
+        - name: Readout adaptation and retained compensation
           icon: hero/bolt
           image: selected-topics/climbing-fiber-readout-adaptation.svg
           description: |-
-            Robots and human bodies can fail to move as expected when the same motor
-            command is used under new conditions, such as carrying a load or being
-            pushed by an external force. Controllers built on liquid neural networks
-            and related continuous-time models (CfC) are usually trained offline and
-            have no built-in way to recalibrate once the body or the environment
-            changes, and retraining the whole network online is costly. This
-            research asks whether a much cheaper route works: freeze the trained
-            network and adapt only a small linear readout, driven by an error signal
-            inspired by the cerebellum's climbing fibers. In a simulated two-link
-            reaching task where a force field pushes the arm sideways, this readout-
-            only adaptation re-straightens the reach. When the field is removed, the
-            arm overshoots in the opposite direction — a mirror-image after-effect
-            that is the behavioral signature of internal-model learning — which a
-            feedback-only controller does not produce. The result carries over to a
-            sparse, neuron-like NCP wiring when the network's internal state is used
-            as the readout basis, holds across force-field strengths and directions,
-            and, within the range tested, never required touching the frozen core.
-            Adapting only the readout thus offers a biologically inspired, low-cost
-            adaptation layer for offline-trained continuous-time controllers.<br><br>
+            When an arm adapts to a force that deflects its movement, an after-effect
+            can reveal that the controller retained a learned change. This study
+            asks what that after-effect says about the learned compensation, and
+            whether useful performance remains when learning stops. In simulations
+            of a torque-driven two-link arm reaching in eight directions under
+            velocity-dependent sideways forces, only a linear torque readout adapts;
+            its feature-generating network stays fixed. We compare six implementations
+            using three continuous-time network configurations, including sparse
+            neural-circuit-policy wiring, an echo-state network, and radial-basis
+            features, with LMS or RLS readout updates. Learning rates are selected
+            on three model initializations and evaluated on ten separate
+            initializations under three force fields. All six improve tracking over
+            their fixed-readout baselines and meet the study's after-effect
+            criterion in every evaluation run. The study also measures how closely
+            the learned output change matches ideal compensation and tests the final
+            readout with updates stopped. In that test, tracking error is 40–97%
+            lower than for the corresponding pre-adaptation controllers. Because
+            preparation and hyperparameters differ, the comparison characterizes
+            complete implementations rather than isolating the effect of feature
+            type or update rule alone.<br><br>
             Related preprint:<br>
-            <strong>Climbing-fiber-like online readout adaptation in frozen
-            continuous-time networks reproduces force-field adaptation and
-            after-effects</strong><br>
+            <strong>Readout adaptation in simulated arm reaching: learned
+            compensation and performance after updates stop</strong><br>
             DOI: <a href="https://doi.org/10.64898/2026.06.11.731593" target="_blank" rel="noopener">10.64898/2026.06.11.731593</a>
         - name: Learning source weights for target-position estimation
           icon: hero/adjustments-horizontal
